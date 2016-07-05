@@ -23,7 +23,6 @@ html {
 header {
     
     font-size: 80px;
-    color: #65A1D3;
     display: block;
     text-align: center;
     animation: spin 2s 0s infinite ease-in;
@@ -34,16 +33,15 @@ article, header {
     box-shadow: 5px 5px 10px #888888;
     border-radius: 25px;
 }
-
+header, h1, .astext {
+    color: #65A1D3;
+}
 h1, article div {
     transform: translateX(20px);
-    width: 380px;
+    padding: 0 20px 0 0;
 }
-h1 {
-     color: #65A1D3;
-}
+
 .astext {
-    color: #65A1D3;
     border: none;
     background: none;
     border-radius: 3px;
