@@ -3,10 +3,10 @@
         transform: rotate(0) scale(.999);
     }
     25% {
-        transform: rotate(-.5deg) scale(1);
+        transform: rotate(-.1deg) scale(1);
     }
     75% {
-        transform: rotate(.5deg) scale(1);
+        transform: rotate(.1deg) scale(1);
     }
 }
 @keyframes drop {
@@ -18,13 +18,23 @@
     }
 }
 html {
-    background-color: #ccffee;
+    background: url("images/background.jpg");
 }
 header {
     font-family: Helvetica;
+    background-color: rgba(210, 218, 220, 0.9);
+    border-radius: 25px;
     font-size: 80px;
-    color: #65FDCB;
+    color: #65A1D3;
     display: block;
     text-align: center;
     animation: spin 2s 0s infinite ease-in;
+}
+article {
+    background-color: rgba(210, 218, 220, 0.9);
+}
+h1, h2, h3, h4 {
+    font-family: Helvetica;
+    border-radius: 25px;
+    color: #65A1D3;
 }
