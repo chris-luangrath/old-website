@@ -3,10 +3,10 @@
         transform: rotate(0) scale(.999);
     }
     25% {
-        transform: rotate(-.1deg) scale(1);
+        transform: rotate(-.01deg) scale(1);
     }
     75% {
-        transform: rotate(.1deg) scale(1);
+        transform: rotate(.01deg) scale(1);
     }
 }
 @keyframes drop {
@@ -21,20 +21,31 @@ html {
     background: url("images/background.jpg");
 }
 header {
-    font-family: Helvetica;
-    background-color: rgba(210, 218, 220, 0.9);
-    border-radius: 25px;
+    
     font-size: 80px;
     color: #65A1D3;
     display: block;
     text-align: center;
     animation: spin 2s 0s infinite ease-in;
 }
-article {
-    background-color: rgba(210, 218, 220, 0.9);
-}
-h1, h2, h3, h4 {
+article, header {
     font-family: Helvetica;
+    background-color: rgba(210, 218, 220, 0.9);
+    box-shadow: 5px 5px 10px #888888;
     border-radius: 25px;
+}
+h1 {
+     color: #65A1D3;
+}
+h1, div {
+    transform: translateX(20px);
+}
+.astext {
     color: #65A1D3;
+    border: none;
+    background:none;
+    transition: color .15s ease-in;
+}
+.astext:hover {
+    color: #aaaaaa;
 }
