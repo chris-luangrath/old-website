@@ -41,6 +41,10 @@ h1, article div {
     padding: 0 20px 0 0;
 }
 
+image { /*I want this to work but it doesn't*/
+    width:200px;
+    height:200px;
+}
 .astext {
     border: none;
     background: none;
