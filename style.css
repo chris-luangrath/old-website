@@ -40,7 +40,11 @@ h1, article div, article image {
     transform: translateX(20px);
     padding: 0 20px 0 0;
 }
-
+article ul {
+    height: 100px;
+    list-style-type: none;
+    overflow: scroll;
+}
 img {
     width:200px;
     height:200px;
