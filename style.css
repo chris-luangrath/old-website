@@ -50,6 +50,7 @@ img {
     height:200px;
 }
 .astext {
+    font-size:25px;
     border: none;
     background: none;
     border-radius: 3px;
