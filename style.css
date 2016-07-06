@@ -36,12 +36,12 @@ article, header {
 header, h1, .astext {
     color: #65A1D3;
 }
-h1, article div {
+h1, article div, article image {
     transform: translateX(20px);
     padding: 0 20px 0 0;
 }
 
-image { /*I want this to work but it doesn't*/
+img { /*I want this to work but it doesn't*/
     width:200px;
     height:200px;
 }
