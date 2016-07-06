@@ -41,7 +41,7 @@ h1, article div, article image {
     padding: 0 20px 0 0;
 }
 
-img { /*I want this to work but it doesn't*/
+img {
     width:200px;
     height:200px;
 }
