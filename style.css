@@ -38,16 +38,16 @@ header, h1, .astext {
 }
 h1, article div, article image {
     transform: translateX(20px);
-    padding: 0 20px 0 0;
 }
 article ul {
     height: 100px;
     list-style-type: none;
     overflow: scroll;
 }
-img {
+img, #overlay {
     width:200px;
     height:200px;
+    padding: 0;
 }
 .astext {
     font-size:25px;
@@ -65,15 +65,28 @@ img {
 #inactive {
     background: none;
 }
-/*
+
+
 #overlay {
-    opacity: 0;
     background: rgba(39,62,84,0.82);
     overflow: hidden;
-    height: 100%;
     z-index: 2;
+    text-align: center;
+    transform: translate(0);
 }
-*/
+.center{
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    /margin: auto 0 auto;
+}
+.project {
+    background-color: #273E54;
+}
+.project:hover {
+    opacity:.5;
+    
+}
 /*
 <*doesn't work*>
 .astext #active:hover {
