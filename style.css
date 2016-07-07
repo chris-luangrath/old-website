@@ -66,6 +66,15 @@ img {
     background: none;
 }
 /*
+#overlay {
+    opacity: 0;
+    background: rgba(39,62,84,0.82);
+    overflow: hidden;
+    height: 100%;
+    z-index: 2;
+}
+*/
+/*
 <*doesn't work*>
 .astext #active:hover {
     color: #65A1D3;
