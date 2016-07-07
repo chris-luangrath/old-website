@@ -47,6 +47,9 @@ article ul {
     list-style-type: none;
     overflow: scroll;
 }
+.grid {
+    content: 0;
+}
 img, .project, .overlay {
     width:200px;
     height:200px;
