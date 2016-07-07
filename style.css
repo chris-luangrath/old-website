@@ -36,6 +36,9 @@ article, header {
 header, h1, .astext {
     color: #65A1D3;
 }
+h1 {
+    text-align: left;
+}
 h1, article div, article image {
     transform: translateX(20px);
 }
@@ -44,7 +47,7 @@ article ul {
     list-style-type: none;
     overflow: scroll;
 }
-img, #overlay {
+img, .project, .overlay {
     width:200px;
     height:200px;
     padding: 0;
@@ -67,25 +70,33 @@ img, #overlay {
 }
 
 
-#overlay {
-    background: rgba(39,62,84,0.82);
+.overlay {
+    background-color: #273E54;
     overflow: hidden;
     z-index: 2;
     text-align: center;
     transform: translate(0);
+    display: inline-block;
 }
 .center{
+    height: 200px;
     padding: 0;
     width: 100%;
     text-align: center;
-    /margin: auto 0 auto;
+    overflow: hidden;
 }
 .project {
-    background-color: #273E54;
+    transition: opacity .4s;
 }
 .project:hover {
     opacity:.5;
     
+}
+.scroll-up {
+    transform: tranlsate(210px);
+}
+.scoll-up:hover {
+    transform: translate(0);
 }
 /*
 <*doesn't work*>
