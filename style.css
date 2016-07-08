@@ -39,9 +39,10 @@ header, h1, .astext {
 h1 {
     text-align: left;
 }
-h1, article div, article image {
+h1, article div, {
     transform: translateX(20px);
 }
+
 article ul {
     height: 100px;
     list-style-type: none;
@@ -78,7 +79,6 @@ img, .project, .overlay {
     overflow: hidden;
     z-index: 2;
     text-align: center;
-    transform: translate(0);
     display: inline-block;
 }
 .center{
@@ -95,11 +95,15 @@ img, .project, .overlay {
     opacity:.5;
     
 }
-.scroll-up {
-    transform: tranlsate(210px);
+.grid {
+    width: 350px;
+    height: 350px;
+}
+.scroll-up { /*I want to have text that will appear after hovering over*/
+    top: 50;
 }
 .scoll-up:hover {
-    transform: translate(0);
+    top: 0;
 }
 /*
 <*doesn't work*>
