@@ -9,19 +9,10 @@
         transform: rotate(.01deg) scale(1);
     }
 }
-@keyframes drop {
-    0% {
-        transform: translateY(-120px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
-}
 html {
     background: url("images/background.jpg");
 }
 header {
-    
     font-size: 80px;
     display: block;
     text-align: center;
@@ -36,10 +27,8 @@ article, header {
 header, h1, .astext {
     color: #65A1D3;
 }
-h1 {
-    text-align: left;
-}
-h1, article div, {
+
+h1, .project-text div {
     transform: translateX(20px);
 }
 
@@ -99,12 +88,14 @@ img, .project, .overlay {
     width: 350px;
     height: 350px;
 }
-.scroll-up { /*I want to have text that will appear after hovering over*/
+/*
+.scroll-up { I want to have text that will appear after hovering over
     top: 50;
 }
 .scoll-up:hover {
     top: 0;
 }
+*/
 /*
 <*doesn't work*>
 .astext #active:hover {
