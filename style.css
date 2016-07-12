@@ -1,6 +1,6 @@
 @import url("css/buttons.css");
 @import url("css/project.css");
-@import url("blueYellowTheme.css");
+@import url("css/blueYellowTheme.css");
 
 @keyframes spin {
     0%, 50%, 100% {
