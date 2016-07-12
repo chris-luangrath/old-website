@@ -20,8 +20,10 @@
 html {
     background-color: #ccffee;
 }
-header {
+header, input, #reply {
     font-family: Helvetica;
+}
+header {
     font-size: 80px;
     color: #65FDCB;
     display: block;
@@ -29,7 +31,6 @@ header {
     animation: spin 2s 0s infinite ease-in;
 }
 input{
-    font-family: Helvetica;
     font-size: 40px;
     width: 700px;
     margin: 0 auto;
@@ -52,4 +53,8 @@ input {
     border: 0;
     padding: 0;
     content: 0;
+}
+#reply {
+    font-size: 40px;
+    font-weight: bold;
 }
