@@ -1,0 +1,36 @@
+.grid {
+    content: 0;
+}
+img, .project, .overlay {
+    width:200px;
+    height:200px;
+    padding: 0;
+}
+
+.overlay {
+    background-color: #273E54;
+    overflow: hidden;
+    z-index: 2;
+    text-align: center;
+    display: inline-block;
+}
+
+.project {
+    transition: opacity .4s;
+}
+.project:hover {
+    opacity:.5;
+    
+}
+.grid {
+    width: 350px;
+    height: 350px;
+}
+/*
+.scroll-up { I want to have text that will appear after hovering over
+    top: 50;
+}
+.scoll-up:hover {
+    top: 0;
+}
+*/

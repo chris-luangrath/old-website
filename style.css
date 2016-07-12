@@ -1,4 +1,6 @@
 @import url("css/buttons.css");
+@import url("css/project.css");
+@import url("blueYellowTheme.css");
 
 @keyframes spin {
     0%, 50%, 100% {
@@ -20,15 +22,6 @@ header {
     text-align: center;
     animation: spin 2s 0s infinite ease-in;
 }
-article, header {
-    font-family: Helvetica;
-    background-color: rgba(210, 218, 220, 0.9);
-    box-shadow: 5px 5px 10px #888888;
-    border-radius: 25px;
-}
-header, h1, .astext {
-    color: #65A1D3;
-}
 
 h1, .project-text div {
     transform: translateX(20px);
@@ -39,22 +32,6 @@ article ul {
     list-style-type: none;
     overflow: scroll;
 }
-.grid {
-    content: 0;
-}
-img, .project, .overlay {
-    width:200px;
-    height:200px;
-    padding: 0;
-}
-
-.overlay {
-    background-color: #273E54;
-    overflow: hidden;
-    z-index: 2;
-    text-align: center;
-    display: inline-block;
-}
 .center{
     height: 200px;
     padding: 0;
@@ -62,25 +39,6 @@ img, .project, .overlay {
     text-align: center;
     overflow: hidden;
 }
-.project {
-    transition: opacity .4s;
-}
-.project:hover {
-    opacity:.5;
-    
-}
-.grid {
-    width: 350px;
-    height: 350px;
-}
-/*
-.scroll-up { I want to have text that will appear after hovering over
-    top: 50;
-}
-.scoll-up:hover {
-    top: 0;
-}
-*/
 /*
 <*doesn't work*>
 .astext #active:hover {
