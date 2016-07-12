@@ -14,3 +14,10 @@
 #inactive {
     background: none;
 }
+
+/* it changes the color of highlight when you hover over an active button
+<*doesn't work*>
+.astext #active:hover {
+    color: #65A1D3;
+}
+*/

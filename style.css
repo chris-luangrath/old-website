@@ -39,9 +39,3 @@ article ul {
     text-align: center;
     overflow: hidden;
 }
-/*
-<*doesn't work*>
-.astext #active:hover {
-    color: #65A1D3;
-}
-*/
