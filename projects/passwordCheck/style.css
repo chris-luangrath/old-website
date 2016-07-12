@@ -28,7 +28,7 @@ header {
     text-align: center;
     animation: spin 2s 0s infinite ease-in;
 }
-input, li {
+input{
     font-family: Helvetica;
     font-size: 40px;
     width: 700px;
@@ -36,22 +36,15 @@ input, li {
     list-style-type: none;
     display: block;
 }
-.todo-field, ul {
+.input-field{
     margin: 0 auto 0;
     border: 0px;
     padding: 0px;
 }
-input, .list li {
+input {
     padding: 40px 80px;
     border: 3px solid #000033;
     background-color: #ffffff;
-}
-input {
-    z-index: 1;
-}
-li {
-    z-index: auto;
-    animation: drop .3s 0s ease-out;
 }
 .shadow {
     box-shadow: 0px 3px 10px #888888;
@@ -59,58 +52,4 @@ li {
     border: 0;
     padding: 0;
     content: 0;
-}
-footer {
-    text-align: center;
-}
-footer button {
-    padding-right: 10px;
-}
-button {
-    border:none;
-    margin:0;
-    padding:0;
-}
-.astext, text {
-    background:none;
-    transition: color .15s ease-in;
-}
-.astext:hover {
-    color: #aaaaaa;
-}
-.hide {
-    opacity: 0;
-    display: none;
-}
-.show {
-    opacity: 1;
-    display: block;
-}
-.comp {
-    color: #000033;
-    text-decoration: line-through;
-}
-
-
-.complete, .delete {
-    display: block;
-    background-size: 40px;
-    background-color: transparent;
-    height: 40px;
-    width: 40px;
-    opacity: 0;
-}
-
-.complete {
-    float: left;
-    transform: translate(-40px);
-    background: url("images/check.png");
-}
-.complete:hover, .complete:checked, .delete:hover {
-    opacity: 1;
-}
-.delete{
-    float: right;
-    transform: translate(40px);
-    background-image: url("images/x.png");
 }
