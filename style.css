@@ -45,23 +45,6 @@ img, .project, .overlay {
     height:200px;
     padding: 0;
 }
-.astext {
-    font-size:25px;
-    border: none;
-    background: none;
-    border-radius: 3px;
-    transition: all .15s ease-in;
-}
-.astext:hover {
-    color: #aaaaaa;
-}
-#active {
-    background-color: #B4C7D8;
-}
-#inactive {
-    background: none;
-}
-
 
 .overlay {
     background-color: #273E54;
