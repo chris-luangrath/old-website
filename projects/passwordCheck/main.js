@@ -34,7 +34,16 @@ window.onload = function() { //This makes the list from the input
             reply.innerHTML = "Acceptable";
         } else if ((input.value).length > 99) { // 13 is enter
         //input has value, div has innerHTML
-            reply.innerHTML = "I knew it";
+            reply.innerHTML = "I knew someone would try";
+        } else if ((input.value).length < 150) { // 13 is enter
+        //input has value, div has innerHTML
+            reply.innerHTML = "Stop. We're done here. Go Home";
+        } else if ((input.value).length < 175) { // 13 is enter
+        //input has value, div has innerHTML
+            reply.innerHTML = "I haven't even coded anything here. Go away.";
+        } else if ((input.value).length < 205) { // 13 is enter
+        //input has value, div has innerHTML
+            reply.innerHTML = "This is the end. Like the actual end. Please leave";
         } 
     });
 };
