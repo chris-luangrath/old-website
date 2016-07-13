@@ -25,6 +25,8 @@ img, .project, .overlay {
 .grid {
     width: 350px;
     height: 350px;
+    margin: 10px;
+    float: left;
 }
 
 /*
