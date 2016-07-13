@@ -22,7 +22,15 @@ header {
     text-align: center;
     animation: spin 2s 0s infinite ease-in;
 }
-
+img {
+    width:200px;
+    padding: 0;
+}
+.crop {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
 article ul {
     height: 100px;
     list-style-type: none;
