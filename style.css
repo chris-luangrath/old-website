@@ -23,19 +23,18 @@ header {
     animation: spin 2s 0s infinite ease-in;
 }
 
-h1, .project-text div {
-    transform: translateX(20px);
-}
-
 article ul {
     height: 100px;
     list-style-type: none;
     overflow: scroll;
 }
 .center{
-    height: 200px;
+    <!--height: 200px; -->
     padding: 0;
     width: 100%;
     text-align: center;
     overflow: hidden;
+}
+.shift, h1{
+    transform: translateX(10px);
 }
