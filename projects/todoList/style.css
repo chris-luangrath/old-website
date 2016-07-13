@@ -114,3 +114,17 @@ button {
     transform: translate(40px);
     background-image: url("images/x.png");
 }
+#goBack {
+    color: #65FDCB;
+    font-size:25px;
+    border: none;
+    background: none;
+    border-radius: 3px;
+    transition: all .15s ease-in;
+    top: 0;
+    right: 0;
+    position: absolute;
+}
+#goBack:hover {
+    color: #10B27D;
+}

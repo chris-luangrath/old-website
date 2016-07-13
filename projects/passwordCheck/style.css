@@ -58,3 +58,19 @@ input {
     font-size: 40px;
     font-weight: bold;
 }
+.astext {
+    color: #65FDCB;
+    font-size:25px;
+    border: none;
+    background: none;
+    border-radius: 3px;
+    transition: all .15s ease-in;
+}
+.astext:hover {
+    color: #10B27D;
+}
+#goBack {
+    top: 0;
+    right: 0;
+    position: absolute;
+}
