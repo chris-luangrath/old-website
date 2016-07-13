@@ -29,19 +29,19 @@ window.onload = function() { //This makes the list from the input
         } else if ((input.value).length < 40) { // 13 is enter
         //input has value, div has innerHTML
             reply.innerHTML = "Who are you trying to impress?";
-        } else if ((input.value).length < 60) { // 13 is enter
+        } else if ((input.value).length < 99) { // 13 is enter
         //input has value, div has innerHTML
             reply.innerHTML = "Acceptable";
-        } else if ((input.value).length > 99) { // 13 is enter
+        } else if ((input.value).length < 149) { // 13 is enter
         //input has value, div has innerHTML
             reply.innerHTML = "I knew someone would try";
-        } else if ((input.value).length < 150) { // 13 is enter
+        } else if ((input.value).length < 174) { // 13 is enter
         //input has value, div has innerHTML
             reply.innerHTML = "Stop. We're done here. Go Home";
-        } else if ((input.value).length < 175) { // 13 is enter
+        } else if ((input.value).length < 204) { // 13 is enter
         //input has value, div has innerHTML
             reply.innerHTML = "I haven't even coded anything here. Go away.";
-        } else if ((input.value).length < 205) { // 13 is enter
+        } else if ((input.value).length < 300) { // 13 is enter
         //input has value, div has innerHTML
             reply.innerHTML = "This is the end. Like the actual end. Please leave";
         } 
