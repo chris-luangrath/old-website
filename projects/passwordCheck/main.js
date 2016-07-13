@@ -1,16 +1,40 @@
 window.onload = function() { //This makes the list from the input
     var input = document.getElementById('input');
     var reply = document.getElementById('reply');
-    input.addEventListener('keydown', function (e) {
-        var key = e.which || e.keyCode;
-        if ((input.value).length < 2) { // 13 is enter
+    input.addEventListener('keyup', function (e) {
+        //var key = e.which || e.keyCode;
+        if ((input.value).length === 0) { // 13 is enter
         //input has value, div has innerHTML
-            reply.innerHTML = "My dog could do better";
-        } else if ((input.value).length < 2) { // 13 is enter
-            reply.innerHTML = "My dog could do better";
-        } else if ((input.value).length < 2) { // 13 is enter
+            reply.innerHTML = "Having no password would be better than having one of yours";
+        } else if ((input.value).length === 1) { // 13 is enter
         //input has value, div has innerHTML
-            reply.innerHTML = "My dog could do better";
-        }
+            reply.innerHTML = "One character isn't long enough, honey...";
+        } else if ((input.value).length < 3) { // 13 is enter
+        //input has value, div has innerHTML
+            reply.innerHTML = "My dog could do better than you";
+        } else if ((input.value).length < 5) { // 13 is enter
+            reply.innerHTML = "Who let you use a computer?";
+        } else if ((input.value).length < 9) { // 13 is enter
+        //input has value, div has innerHTML
+            reply.innerHTML = "It's ok if you aren't smart enough to use a good password";
+        } else if ((input.value).length < 14) { // 13 is enter
+        //input has value, div has innerHTML
+            reply.innerHTML = "People like you shouldn't be using computers";
+        } else if ((input.value).length < 20) { // 13 is enter
+        //input has value, div has innerHTML
+            reply.innerHTML = "If I say anything else, it'd be a compliment";
+        } else if ((input.value).length < 30) { // 13 is enter
+        //input has value, div has innerHTML
+            reply.innerHTML = "You tried I guess...";
+        } else if ((input.value).length < 40) { // 13 is enter
+        //input has value, div has innerHTML
+            reply.innerHTML = "Who are you trying to impress?";
+        } else if ((input.value).length < 60) { // 13 is enter
+        //input has value, div has innerHTML
+            reply.innerHTML = "Acceptable";
+        } else if ((input.value).length > 99) { // 13 is enter
+        //input has value, div has innerHTML
+            reply.innerHTML = "I knew it";
+        } 
     });
 };
