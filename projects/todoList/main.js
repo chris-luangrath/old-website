@@ -38,6 +38,7 @@ window.onload = function() { //This makes the list from the input
             //immedietly invoked function expression
             return function(){delItem(count);};
         }(counter);
+        
         newItem.appendChild(completeButton);
         newItem.appendChild(todotext);
         newItem.appendChild(deleteButton);
