@@ -74,3 +74,12 @@ input {
     right: 0;
     position: absolute;
 }
+.red {
+    
+}
+#box {
+    position: absolute;
+    height: 300px;
+    width: 300px;
+    bottom: 0;
+}
