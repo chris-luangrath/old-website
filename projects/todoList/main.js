@@ -47,18 +47,18 @@ window.onload = function() { //This makes the list from the input
         var text = document.getElementById("listItem" + count);
         var check = document.getElementById("complete" + count);
         if (check.checked === true){
-            text.className = "comp show"
+            text.className = "comp show";
         } else {
-            text.className = "show"
+            text.className = "show";
         }
-    }
+    };
     
     delItem = function(count){
         var text = document.getElementById("listItem" + count);
         text.remove();
         counter--;
         changeFooter(showNum());
-    }
+    };
     
     showNum = function(){
         var num = 0;
@@ -69,7 +69,7 @@ window.onload = function() { //This makes the list from the input
             }
         }
         return num;
-    }
+    };
     
     changeFooter = function(num){
         var footer= document.getElementById('amount');
@@ -80,10 +80,10 @@ window.onload = function() { //This makes the list from the input
                 left = " items left";
             }
             footer.innerHTML = num + left;
-    }
+    };
     
     document.getElementById("all").onclick = function(){
-        var num = 0
+        var num = 0;
         for (var i = 0; i != counter; i++){
             
             var text = document.getElementById("listItem" + i);
@@ -94,7 +94,7 @@ window.onload = function() { //This makes the list from the input
             }
         }
         changeFooter(counter);
-    }
+    };
     
     document.getElementById("active").onclick = function(){
         var num = counter;
@@ -106,14 +106,14 @@ window.onload = function() { //This makes the list from the input
                 
             } else if (text.className === "comp show" || text.className === "comp hide"){
                 text.className = "comp hide";
-                num--
+                num--;
             }
         }
         changeFooter(num);
-    }
+    };
     
     document.getElementById("completed").onclick = function(){
-        var num = counter
+        var num = counter;
         for (var i = 0; i != counter; i++){
             var text = document.getElementById("listItem" + i);
             if (text.className === "show" || text.className === "hide"){
@@ -124,7 +124,7 @@ window.onload = function() { //This makes the list from the input
             }
         }
         changeFooter(num);
-    }
+    };
     
     document.getElementById("clear").onclick = function(){
         for (var i = 0; i != counter; i++){
@@ -133,7 +133,7 @@ window.onload = function() { //This makes the list from the input
                 text.remove();
             }
         }
-    }
+    };
     
     input = document.body.getElementsByClassName("todo-input")[0];
     input.onkeypress = addItemIfEnter;
