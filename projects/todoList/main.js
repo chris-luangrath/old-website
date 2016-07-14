@@ -2,7 +2,8 @@ var counter = 0;
 window.onload = function() { //This makes the list from the input
     "use strict";
     var
-    input, addItemIfEnter, addItem, list, makeItem, compItem, delItem, changeFooter, all, active, completed, showNum;
+    input, addItemIfEnter, addItem, list, makeItem, compItem, delItem, changeFooter, all, active, completed, showNum, findHide, findNum;
+    var mode = "all";
     addItem = function(x) {
         list.appendChild(x);
     };
@@ -10,7 +11,7 @@ window.onload = function() { //This makes the list from the input
         if (e.which === 13 && input.value !== "") {
             addItem(makeItem());
             counter++;
-            changeFooter(counter);
+            changeFooter();
             input.value = "";
         }
     };
@@ -51,27 +52,18 @@ window.onload = function() { //This makes the list from the input
         } else {
             text.className = "show";
         }
+        changeFooter();
     };
     
     delItem = function(count){
         var text = document.getElementById("listItem" + count);
         text.remove();
         counter--;
-        changeFooter(showNum());
+        changeFooter();
     };
     
-    showNum = function(){
-        var num = 0;
-        for (var i = 0; i != counter; i++){
-            var text = document.getElementById("listItem" + i);
-            if (text.className === "show" || text.className === "comp show"){
-                num++;
-            }
-        }
-        return num;
-    };
-    
-    changeFooter = function(num){
+    changeFooter = function(){
+        var num = findNum();
         var footer= document.getElementById('amount');
             var left;
             if (num === 1){
@@ -82,48 +74,61 @@ window.onload = function() { //This makes the list from the input
             footer.innerHTML = num + left;
     };
     
-    document.getElementById("all").onclick = function(){
-        var num = 0;
-        for (var i = 0; i != counter; i++){
+    findNum = function(){
+        var num = counter;
+        if (mode === "all") {
+            for (var i = 0; i != counter; i++){
             
             var text = document.getElementById("listItem" + i);
             if (text.className === "hide"){
                 text.className = "show";
+            } else if (text.className === "comp show") {
+                num--;
             } else if (text.className === "comp hide"){
                 text.className = "comp show";
+                num--;
             }
         }
-        changeFooter(counter);
+        } else if (mode === "active"){
+            for (var i = 0; i != counter; i++){
+                var text = document.getElementById("listItem" + i);
+                if (text.className === "hide"){
+                    
+                    text.className = "show";
+                 
+                } else if (text.className === "comp show" || text.className === "comp hide"){
+                    text.className = "comp hide";
+                    num--;
+                }
+            }
+        } else if (mode === "completed") {
+            for (var i = 0; i != counter; i++){
+                var text = document.getElementById("listItem" + i);
+                if (text.className === "show" || text.className === "hide"){
+                    text.className = "hide";
+                    //num--; since it's just the completed ones, it will always return 0
+                } else if (text.className === "comp hide"){
+                    text.className = "comp show";
+                }
+            }
+            num = 0;
+        }
+        return num;
+    };
+    
+    document.getElementById("all").onclick = function(){
+        mode = "all";
+        changeFooter();
     };
     
     document.getElementById("active").onclick = function(){
-        var num = counter;
-        for (var i = 0; i != counter; i++){
-            var text = document.getElementById("listItem" + i);
-            if (text.className === "hide"){
-                
-                text.className = "show";
-                
-            } else if (text.className === "comp show" || text.className === "comp hide"){
-                text.className = "comp hide";
-                num--;
-            }
-        }
-        changeFooter(num);
+        mode = "active";
+        changeFooter();
     };
     
     document.getElementById("completed").onclick = function(){
-        var num = counter;
-        for (var i = 0; i != counter; i++){
-            var text = document.getElementById("listItem" + i);
-            if (text.className === "show" || text.className === "hide"){
-                text.className = "hide";
-                num--;
-            } else if (text.className === "comp hide"){
-                text.className = "comp show";
-            }
-        }
-        changeFooter(num);
+        mode = "completed";
+        changeFooter();
     };
     
     document.getElementById("clear").onclick = function(){
