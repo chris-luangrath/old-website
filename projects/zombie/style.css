@@ -1,0 +1,76 @@
+@keyframes spin {
+    0%, 50%, 100% {
+        transform: rotate(0) scale(.999);
+    }
+    25% {
+        transform: rotate(-.5deg) scale(1);
+    }
+    75% {
+        transform: rotate(.5deg) scale(1);
+    }
+}
+@keyframes drop {
+    0% {
+        transform: translateY(-120px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+html {
+    background-color: #ccffee;
+}
+header, input, #reply {
+    font-family: Helvetica;
+}
+header {
+    font-size: 80px;
+    color: #65FDCB;
+    display: block;
+    text-align: center;
+    animation: spin 2s 0s infinite ease-in;
+}
+input{
+    font-size: 40px;
+    width: 700px;
+    margin: 0 auto;
+    list-style-type: none;
+    display: block;
+}
+.input-field{
+    margin: 0 auto 0;
+    border: 0px;
+    padding: 0px;
+}
+input {
+    padding: 40px 80px;
+    border: 3px solid #000033;
+    background-color: #ffffff;
+}
+.shadow {
+    box-shadow: 0px 3px 10px #888888;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    content: 0;
+}
+#reply {
+    font-size: 40px;
+    font-weight: bold;
+}
+.astext {
+    color: #65FDCB;
+    font-size:25px;
+    border: none;
+    background: none;
+    border-radius: 3px;
+    transition: all .15s ease-in;
+}
+.astext:hover {
+    color: #10B27D;
+}
+#goBack {
+    top: 0;
+    right: 0;
+    position: absolute;
+}
