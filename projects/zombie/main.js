@@ -15,11 +15,11 @@ window.onload = function() {
     
 var input, output, addItem, addItemIfEnter, makeItem;
 
-input = document.getElementById('input');    
-output = document.getElementById('output');    
-    
+
 addItem = function(x) {
         output.appendChild(x);
+        var br = document.createElement("br");
+        output.appendChild(br);
     };
 addItemIfEnter = function(e) {
         if (e.which === 13 && input.value !== "") {
@@ -28,13 +28,16 @@ addItemIfEnter = function(e) {
         }
     };
 makeItem = function() {
-        var newItem = document.createElement("div");
+        var newItem = document.createElement("li");
         newItem.className = "reply";
         var text = document.createTextNode(input.value);
+
         newItem.appendChild(text);
+        
         return newItem;
     };
-
+input = document.getElementById('input');    
+output = document.getElementById('output');    
 input.onkeypress = addItemIfEnter;
 
 };

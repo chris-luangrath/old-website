@@ -20,8 +20,9 @@
 html {
     background-color: #ccffee;
 }
-div, header {
+li, header, input {
     font-family: Helvetica;
+    list-style: none;
 }
 header {
     font-size: 80px;
@@ -31,7 +32,6 @@ header {
     animation: spin 2s 0s infinite ease-in;
 }
 input {
-    font-family: Helvetica;
     font-size: 40px;
     width: 700px;
     margin: 0 auto 0;
@@ -64,7 +64,7 @@ button {
     padding:0;
 }
 
-form {
+ul {
     height: 300px;
     width: 80%;
     overflow: scroll;
