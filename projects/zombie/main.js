@@ -1,49 +1,68 @@
-window.onload = function() { //This makes the list from the input
-    var input = document.getElementById('input');
-    var reply = document.getElementById('reply');
-    input.addEventListener('keyup', function (e) {
-        //var key = e.which || e.keyCode;
-        if ((input.value).length === 0) { // 13 is enter
-        //input has value, div has innerHTML
-            reply.innerHTML = "Having no password would be better than having one of yours";
-        } else if ((input.value).length === 1) { // 13 is enter
-        //input has value, div has innerHTML
-            reply.innerHTML = "One character isn't long enough, honey...";
-        } else if ((input.value).length < 3) { // 13 is enter
-        //input has value, div has innerHTML
-            reply.innerHTML = "My dog could do better than you";
-        } else if ((input.value).length < 5) { // 13 is enter
-            reply.innerHTML = "Who let you use a computer?";
-        } else if ((input.value).length < 9) { // 13 is enter
-        //input has value, div has innerHTML
-            reply.innerHTML = "It's ok if you aren't smart enough to use a good password";
-        } else if ((input.value).length < 14) { // 13 is enter
-        //input has value, div has innerHTML
-            reply.innerHTML = "People like you shouldn't be using computers";
-        } else if ((input.value).length < 20) { // 13 is enter
-        //input has value, div has innerHTML
-            reply.innerHTML = "If I say anything else, it'd be a compliment";
-        } else if ((input.value).length < 30) { // 13 is enter
-        //input has value, div has innerHTML
-            reply.innerHTML = "You tried I guess...";
-        } else if ((input.value).length < 40) { // 13 is enter
-        //input has value, div has innerHTML
-            reply.innerHTML = "Who are you trying to impress?";
-        } else if ((input.value).length < 99) { // 13 is enter
-        //input has value, div has innerHTML
-            reply.innerHTML = "Acceptable";
-        } else if ((input.value).length < 149) { // 13 is enter
-        //input has value, div has innerHTML
-            reply.innerHTML = "I knew someone would try";
-        } else if ((input.value).length < 174) { // 13 is enter
-        //input has value, div has innerHTML
-            reply.innerHTML = "Stop. We're done here. Go Home";
-        } else if ((input.value).length < 204) { // 13 is enter
-        //input has value, div has innerHTML
-            reply.innerHTML = "I haven't even coded anything here. Go away.";
-        } else if ((input.value).length < 300) { // 13 is enter
-        //input has value, div has innerHTML
-            reply.innerHTML = "This is the end. Like the actual end. Please leave";
-        } 
+/*var input, output, print;
+        input = document.getElementById('input');
+        output = document.getElementById('output');
+print = function(){
+    input.addEventListener('keypress', function (e) {
+        var key = e.which || e.keyCode;
+        if (key === 13) { // 13 is enter
+            var input= document.getElementById('list');
+            input.innerHTML = document.getElementById('todo').value;
+        }
     });
 };
+*/
+window.onload = function() {
+    
+var input, output, addItem, addItemIfEnter, makeItem;
+
+input = document.body.getElementsById("input");    
+output = document.getElementById('output');    
+    
+addItem = function(x) {
+        output.appendChild(x);
+    };
+addItemIfEnter = function(e) {
+        if (e.which === 13 && input.value !== "") {
+            addItem(makeItem());
+            input.value = "";
+        }
+    };
+makeItem = function() {
+        var newItem = document.createElement("text");
+        newItem.className = "repy";
+        var text = document.createTextNode(input.value);
+        newItem.appendChild(text);
+        return newItem;
+    };
+
+input.onkeypress = addItemIfEnter;
+
+};
+
+/*
+var zombie = {
+        
+        
+        alert("The year is 20ZZ. Zombies exist now. It's kinda scary");
+        var go = false;
+        do {
+            action = prompt("You are walking down the street when suddenly, you see a zombie walking towards you! You can: walk the other way, strike up a conversation, or punch him in the schnozz. What will you do: walk, talk, or fight?");
+            if (action == "walk") {
+                alert("Lucky for you, zombies can't walk fast. You hastily speed walk away from danger and you live another day. You Win!");
+                go = true;
+            } else if (action == "talk") {
+                alert("You stop what you're doing and start talking to the zombie. It turns out, zombies don't eat brains. It was just a racial stereotype that early Americans created. It turns out, the zombie's name is Tom, and he wants to be a software engineer. Good for him. Good for you. You Win.");
+                go = true;
+            } else if (action == "fight") {
+                alert("You feel a surge of adrenalin as you stop walking towards the zombie. You will your hand to burst into flames and you run towards the zombie and deck him in the face. He falls down and starts to cry about \"How much it hurts\" and \"how he has a family\". Soon, the zombie is no more. You Win?");
+                go = true;
+            } else if (action == "walk, talk, or fight") {
+                alert("OH YOU THINK YOU'RE SOO CLEVER, EH BOY?");
+                go = true;
+            } else {
+                alert("type walk, talk, or fight. Lets try again.");
+            }
+
+        } while (go === false);
+    };
+    */

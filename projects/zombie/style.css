@@ -20,8 +20,10 @@
 html {
     background-color: #ccffee;
 }
-header {
+text, header {
     font-family: Helvetica;
+}
+header {
     font-size: 80px;
     color: #65FDCB;
     display: block;
@@ -69,13 +71,15 @@ form {
     margin: auto;
     padding: 10px;
 }
-.center{
-    <!--height: 200px; -->
-    padding: 0;
-    width: 100%;
-    text-align: center;
-    overflow: hidden;
+.narrator {
+    font-weight: bold;
 }
+.options {
+    font-style: italic;
+}
+
+
+
 #goBack {
     color: #65FDCB;
     font-size:25px;
