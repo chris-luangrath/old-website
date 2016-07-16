@@ -15,7 +15,7 @@ window.onload = function() {
     
 var input, output, addItem, addItemIfEnter, makeItem;
 
-input = document.body.getElementsById("input");    
+input = document.getElementById('input');    
 output = document.getElementById('output');    
     
 addItem = function(x) {
@@ -28,8 +28,8 @@ addItemIfEnter = function(e) {
         }
     };
 makeItem = function() {
-        var newItem = document.createElement("text");
-        newItem.className = "repy";
+        var newItem = document.createElement("div");
+        newItem.className = "reply";
         var text = document.createTextNode(input.value);
         newItem.appendChild(text);
         return newItem;
