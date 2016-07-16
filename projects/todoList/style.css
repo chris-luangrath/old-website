@@ -41,15 +41,13 @@ input, li {
     border: 0px;
     padding: 0px;
 }
-input {
-    position: absolute;
+input, .list li {
     padding: 40px 80px;
     border: 3px solid #000033;
     background-color: #ffffff;
-    bottom: 50px;
 }
 input {
-    
+    z-index: 1;
 }
 li {
     z-index: auto;
