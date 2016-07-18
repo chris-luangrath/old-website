@@ -46,3 +46,8 @@ article ul {
 .shift, h1{
     transform: translateX(10px);
 }
+footer {
+    position: relative;
+    bottom: 0;
+    display: block;
+}
