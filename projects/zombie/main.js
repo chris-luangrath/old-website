@@ -13,17 +13,43 @@ print = function(){
 */
 window.onload = function() {
     
-var input, output, addItem, addItemIfEnter, makeItem;
-
+var input, output, addItem, addItemIfEnter, makeItem, makeNarrator, makeOptions, addStory;
+var reply = "";
 
 addItem = function(x) {
         output.appendChild(x);
         var br = document.createElement("br");
         output.appendChild(br);
     };
+addStory = function(narrator, options) {
+    output.appendChild(narrator);
+    output.appendChild(options);
+    var br = document.createElement("br");
+    output.appendChild(br);
+};
+makeNarrator = function(narrator) {
+    var newItem = document.createElement("li");
+        newItem.className = "narrator";
+        var text = document.createTextNode(narrator);
+
+        newItem.appendChild(text);
+        
+        return newItem;
+};
+makeOptions = function(options) {
+    var newItem = document.createElement("li");
+        newItem.className = "options";
+        var text = document.createTextNode(options);
+
+        newItem.appendChild(text);
+        
+        return newItem;
+};
+
 addItemIfEnter = function(e) {
         if (e.which === 13 && input.value !== "") {
             addItem(makeItem());
+            reply = input.value;
             input.value = "";
         }
     };
@@ -37,11 +63,28 @@ makeItem = function() {
         return newItem;
     };
 input = document.getElementById('input');    
-output = document.getElementById('output');    
-input.onkeypress = addItemIfEnter;
+output = document.getElementById('output');   
 
+
+
+var wait4Enter = true;
+var printed = false;
+/* THIS DON'T WORK    GET HELP    SAVE YOURSELF    ALL IS LOST
+do {
+    if (wait4Enter === true) {
+        if (printed === false){
+            addStory(makeNarrator("Text"),makeOptions("Also Text"));
+            printed = true;
+        }
+        input.onkeypress = addItemIfEnter;
+        } else {
+            setTimeout(check, 1000); // check again in a second
+    }
+} while (wait4Enter === true);
+console.log(reply);
+console.log("Holy heck it works");
 };
-
+*/
 /*
 var zombie = {
         
