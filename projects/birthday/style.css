@@ -17,10 +17,17 @@
         transform: translateY(0px);
     }
 }
+@keyframes spaz {
+    0% {transform: translate(1000px);}
+    25% {transform: translate(-100px)}
+    50% {transform: translateY(300px) rotate(100deg);}
+    75% {transform: translateX(-1000px) rotate(-100deg);}
+    100% {transform: translate(0), rotate(0)}
+}
 html {
     background-color: #ccffee;
 }
-header, input, #reply {
+header, input, #reply, div {
     font-family: Helvetica;
 }
 header {
@@ -29,34 +36,6 @@ header {
     display: block;
     text-align: center;
     animation: spin 2s 0s infinite ease-in;
-}
-input{
-    font-size: 40px;
-    width: 700px;
-    margin: 0 auto;
-    list-style-type: none;
-    display: block;
-}
-.input-field{
-    margin: 0 auto 0;
-    border: 0px;
-    padding: 0px;
-}
-input {
-    padding: 40px 80px;
-    border: 3px solid #000033;
-    background-color: #ffffff;
-}
-.shadow {
-    box-shadow: 0px 3px 10px #888888;
-    margin: 0;
-    border: 0;
-    padding: 0;
-    content: 0;
-}
-#reply {
-    font-size: 40px;
-    font-weight: bold;
 }
 .astext {
     color: #65FDCB;
@@ -73,4 +52,13 @@ input {
     top: 0;
     right: 0;
     position: absolute;
+}
+div {
+    animation: spaz 1s infinite alternate; 
+    font-size: 80px;
+    display: block;
+    text-align: center;
+    margin:  0 auto 0;
+    top: 50%;
+    left: 50%;
 }
