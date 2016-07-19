@@ -24,7 +24,7 @@
 }
 .grid {
     width: 350px;
-    height: 350px;
+    min-height: 350px;
     margin: 10px;
     float: left;
 }
