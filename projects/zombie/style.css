@@ -79,9 +79,11 @@ input {
 }
 .start:hover {
     color: #00e6e6;
+    cursor: pointer;
 }
 .astext:hover {
     color: #10B27D;
+    cursor: pointer;
 }
 #goBack {
     top: 0;

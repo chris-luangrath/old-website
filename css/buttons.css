@@ -7,6 +7,7 @@
 }
 .astext:hover {
     color: #aaaaaa;
+    cursor: pointer;
 }
 #active {
     background-color: #B4C7D8;

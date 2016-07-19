@@ -77,6 +77,7 @@ button {
 }
 .astext:hover {
     color: #aaaaaa;
+    cursor: pointer;
 }
 .hide {
     opacity: 0;

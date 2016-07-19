@@ -68,6 +68,7 @@ input {
 }
 .astext:hover {
     color: #10B27D;
+    cursor: pointer;
 }
 #goBack {
     top: 0;
