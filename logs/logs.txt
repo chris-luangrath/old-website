@@ -1,0 +1,87 @@
+c2e3593 - i'm trying to fix the footer and I'm starting to think about being a vet
+379e7bc - Working on zombie, let's work on it later
+716a3b4 - well i think i sorta broke it but then again, it never really was working in the first place so yeah
+e0fce9a - enter prints the reply now so NOW i have to actually read the input and see if it correlates with the story
+6228302 - changed the text tags to divs
+4ca2b53 - i forgot what i did. It's centered and i'm trying to get it to read the input and print it
+6f3a82d - finally got the input to be centered. remember: 0 auto
+6b76975 - fixed todoList/style.css but I should learn how to do that in git
+ac0378b - added log pretty much
+4ffbe06 - zombie has started
+03486f5 - creating the interface
+812bc3a - template for upcoming projects
+19e5f57 - fixed up projects, started zombie
+0659bb7 - fig bar is not finished and maybe it neverwill be :(
+ebace60 - working on figCatch
+26205c9 - touching up on things, not too important
+64d62e3 - cleaning up code in index and almost making it work in the js
+81e41b8 - copywrote
+cf75cba - added a butt ton of ; because I'm bad at programming
+40a31ca - changed class of the div in projects
+192f4f3 - fixed the translate on the todo page
+a34406d - changed the titles of the pages
+f81fab3 - image crop fixed
+c134fc1 - changed who I am
+5d69803 - grid and spacing works now. I made them float left and gave them a margin
+504fa0f - adding to the project
+1cbb8ab - adding to the project
+a43eb67 - added to What's New
+7eea4c1 - added a 'go home' button on the projects
+74e8e5d - touching up password checker and adding it onto the projects page.
+a29c0f0 - i fixed the shifts to be easier to understand and use
+e281459 - put the buttons into a nav
+45125d1 - pretty much works now, just have to tidy things up
+1492259 - got reply working
+a8dd3b2 - took off the </img> tags because they're not needed
+d8158b4 - #TeamMystic
+819e0f7 - started working on checker
+2ba4fa9 - i forgot what i did
+27fd3d5 - forgot to import blue/Yellow theme correctly
+c837a8f - fixing stuff
+0f4f445 - cleaned up the css
+2bf0b40 - changing how my css will work.I will have one main css file that is called while that css file will call other css files.
+cb73bf6 - separating css's, starting with buttons
+ce905b8 - #teamMystic
+3c7050f - fixed translation on the 'other' project
+af4e198 - fixed the text, now going to have a grid-like formation for projects
+250e0e4 - added another spot for a project so I can format it correctly. Also, i can't move the text in the article and it sucks
+21665f2 - The small article/grid thing is working. I want to mess with the 'translate(20px)' and I want scrolling text after I hover over the image
+68d12b6 - i want the project page to be a grid of projects
+27ef860 - I should find things better to do than finding gifs and putting them on my website
+baee6f3 - SUPER FIGHTING ROBOT: MEGAMAN
+bce5d8d - added megaman because he's the super fighting robot
+56f413a - the todo image is finally centered and has a nice hover effect. working on text effect for todo image now
+481aca5 - working on the image. i got the overlay working, now i need to center it
+2ed527d - i want to make an overlay sort of thing for the image so you can click on it but idk how to do that. For now, I will stick with a 'click here' thing
+29a7cf8 - starting to center image
+c207608 - changed who i am
+a7b52ee - buttons are bigger is now in what's new
+2fc3048 - the buttons are bigger now because they were just too dang smol
+841f48d - what's new is finally a scrolly list! too bad there's nothing to scroll, really
+a494a4b - what's new is going to be a scrolly list
+5f0c156 - you can click on the image now. I need to make that more obvious later
+3f7cdf9 - added projects folder to hold my projects
+aa3e8c6 - well the image css works now that i've changed the image tags to img (for some reason) and i changed everything else accordingly
+146dcf0 - i said i fixed everything but i didn't because I'm a dirty liar
+cf9b145 - projects button works now
+46d27e9 - i was trying that header file thing but it didn't work so i fixed it
+724202c - i was trying that header file thing but it didn't work so i fixed it
+be1526d - i want to have a header file so I don't have to manually do stuff. we'll save it for later
+1910911 - Adding js to start having one header html file
+5f5b558 - i want to take out the style='width:200px;height:200px;' part of the image tags but i cant?
+2f460db - started working on projects, have todo image
+0c2bed1 - actually fixed h1 and article spacing. also simplified the blue color code
+4455917 - can you dig it
+fc56559 - added shovelght
+176b53c - fixed titles on both
+ef999a5 - added highlight on active window and changed width of artice div and h1
+9b4afe7 - index is now home page, buttons work except projects, added marth, chaged article2 to what's new
+dfbfb84 - changed original index page to who page
+29aa4f2 - added marth
+f884b83 - cleaned up script and link area
+3361d00 - +article2, +header buttons
+fdd5a71 - added article1 and css
+ad0f0c9 - Header -> Chris Luangrath
+658f6cd - added style.css and main.js
+398812d - added index
+d9e3122 - Initial commit
