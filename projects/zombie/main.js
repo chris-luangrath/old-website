@@ -1,4 +1,4 @@
-var start = function() { //This makes the list from the input
+var zombieStart = function() { //This makes the list from the input
     alert("The year is 20ZZ. Zombies exist now. It's kinda scary");
     var go = false;
     do {
