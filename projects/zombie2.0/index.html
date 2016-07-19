@@ -2,7 +2,8 @@
 <html>
 
     <head>
-        <title>zombie</title>
+        <meta http-equiv="content-type"/>
+        <title>Zombies</title>
         <script src="main.js" type="text/javascript"></script>
         <link href="style.css" rel="stylesheet">
     </head>
@@ -10,8 +11,13 @@
     <body>
         <button onclick="location.href='../../projects.html';" class="astext" id="goBack">Go Back to Projects</button>
         <br>
-        <header>zombie</header>
-        <button class="start" id="button" onclick="zombieStart()" type="text">Start Adventure</button>
+        <header>zombie game</header>
+        <br><br><br>
+        <ul id="output">
+            <li class="narrator">This is the first text-based adventure on the site. Are you ready?</li>
+            <li class="options">(Yes, No)</li>
+        </ul>
+        <input type="text" id="input" class="input" placeholder="Type Here">
     </body>
 
 </html>
