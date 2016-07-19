@@ -19,7 +19,7 @@ window.onload = function() { //This makes the list from the input
             reply.innerHTML = "It's ok if you aren't smart enough to use a good password";
         } else if ((input.value).length < 14) { // 13 is enter
         //input has value, div has innerHTML
-            reply.innerHTML = "People like you shouldn't be using computers";
+            reply.innerHTML = "People like you shouldn't use computers";
         } else if ((input.value).length < 20) { // 13 is enter
         //input has value, div has innerHTML
             reply.innerHTML = "If I say anything else, it'd be a compliment";
@@ -44,6 +44,9 @@ window.onload = function() { //This makes the list from the input
         } else if ((input.value).length < 300) { // 13 is enter
         //input has value, div has innerHTML
             reply.innerHTML = "This is the end. Like the actual end. Please leave";
+        } else if ((input.value).length >= 300) { // 13 is enter
+        //input has value, div has innerHTML
+            reply.innerHTML = "That's it, I'm calling the cops";
         } 
     });
 };
