@@ -16,10 +16,9 @@ window.onload = function() {
 var input, output, addItem, continueIfEnter, makeReply, makeNarrator, makeOptions, addStory, openDoor, printStory0;
 var room1, room2, room3, room4;
 var visited1, visited2, visited3, visited4;
-var began = false, end = false, open = false, timer = 0;
+var began = false, end = false, open = false, timer = 0, weapon = "";
 var reply = "";
-var gender = "";
-var currentRoom = "a";
+var currentRoom = 1;
 
 addItem = function(x) {
         output.appendChild(x);
@@ -107,20 +106,36 @@ printStory0 = function() {
                         addItem(makeNarrator("Thank you for visiting my site and checking out my stuff!"));
                         addItem(makeNarrator("It really means a lot!"));
                     }
+                    
                 } else if (reply === "go through hole") {
+                    timer++;
                     room2();
-                    timer++
                 } else if (reply === "wait") {
                     addItem(makeNarrator("You sit down and wait."));
                     addItem(makeNarrator("What do you do?"));
                     addItem(makeOptions("(Examine, Go through door, Go through hole, Wait)"));
+                    timer++;
                 } else {
                     addItem(makeNarrator("Choose an option from the options"));
                     addItem(makeOptions("(Examine, Go through door, Go through hole, Wait)"));
+                    break;
                 }
                 break;
             case 2:
-                room2();
+                if (reply === "left") {
+                    timer++;
+                    room3();
+                } else if (reply === "right") {
+                    timer++;
+                    room4();
+                } else if (reply === "back") {
+                    timer++;
+                    room1();
+                } else {
+                    addItem(makeNarrator("Choose an option from the options"));
+                    addItem(makeOptions("(Left, Right, Back)"));
+                    break;
+                }
                 break;
             case 3:
                 room3();
@@ -154,24 +169,25 @@ room1 = function() {
 };
 room2 = function() {
     if (visited2 === false){
-        addItem(makeNarrator("Through the hole you find a hallway."));
+        addItem(makeNarrator("You find 2 hallways through the hole."));
     } else {
-        addItem(makeNarrator("You return to where the "));
+        addItem(makeNarrator("You return to where the other rooms meet."));
     }
-    addItem(makeNarrator("There's nothing in it but a metal door and a hole opposite of the door."));
+    addItem(makeNarrator("There are two hallways on each side of you and the room you first came from."));
     addItem(makeNarrator("What will you do?"));
-        addItem(makeOptions("(Left, Right, Back)"));
+    addItem(makeOptions("(Left, Right, Back)"));
     visited2 = true;
+    currentRoom = 2;
 };
 room3 = function() {
-    if (visited1 === false){
-        addItem(makeNarrator("Ok so you wake up in a white room you woke up."));
+    if (visited3 === false){
+        addItem(makeNarrator("There is a large computer."));
     } else {
         addItem(makeNarrator("You are in the white room."));
     }
-    addItem(makeNarrator("There's nothing in it but a metal door and a hole opposite of the door."));
     addItem(makeNarrator("What do you do?"));
-    addItem(makeOptions("(Examine, Go through door, Go through hole, Wait)"));
+    if ()
+    addItem(makeOptions("(Examine, Exit)"));
     currentRoom = 3;
     visited3 = true;
 };
