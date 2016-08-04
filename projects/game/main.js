@@ -179,6 +179,9 @@ room2 = function() {
     visited2 = true;
     currentRoom = 2;
 };
+//3 is a computer that you have to beat up
+//4 is a room full of weapons that you can choose from
+//When you are in room 3, if weapon != null, have another option to wreck the computer."
 room3 = function() {
     if (visited3 === false){
         addItem(makeNarrator("There is a large computer."));
@@ -186,8 +189,11 @@ room3 = function() {
         addItem(makeNarrator("You are in the white room."));
     }
     addItem(makeNarrator("What do you do?"));
-    if ()
-    addItem(makeOptions("(Examine, Exit)"));
+    if (weapon === null){
+        addItem(makeOptions("(Examine, Exit)"));
+    } else {
+        addItem(makeOptions("(Examine, Exit, Wreck the Computer)"));
+    }
     currentRoom = 3;
     visited3 = true;
 };
