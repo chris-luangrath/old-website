@@ -1,0 +1,4 @@
+1. Figure out how to autoscroll to the bottom
+2. Add a combat section (when you destroy the computer, alarms sounds, man stops you)
+3. ????
+4. Profit

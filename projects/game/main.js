@@ -23,6 +23,9 @@ var reply = "";
 var currentRoom = 1;
 var weapons =["sword", "hammer", "axe", "chainsaw"];
 var weaponList = "";
+
+//var focus = window.getElementById('focus');
+
 addItem = function(x) {
         output.appendChild(x);
         var br = document.createElement("br");
@@ -66,8 +69,7 @@ makeReply = function(theReply) {
         
         return newItem;
     };
-    //begin, yesStart
-    //hasn't started, says yes to start. yesStart is true but begin is false;
+
 printStory0 = function() {
     timer++;
     if (began === false){
@@ -79,8 +81,8 @@ printStory0 = function() {
             addItem(makeNarrator("If your goal was to be a loser, you achieved that"));
             end = true;
         } else {
-            addItem(makeNarrator("Choose an option from the options"));
-            addItem(makeNarrator("This is the first text-based adventure on the site. Are you ready?"));
+            addItem(makeNarrator("Choose an option from the Parentheses"));
+            addItem(makeNarrator("Are you ready to escape the Building?"));
             addItem(makeOptions("(Yes, No)"));
         }
     } else if (began == true){
@@ -114,7 +116,7 @@ printStory0 = function() {
                     addItem(makeOptions("(Examine, Go through door, Go through hole, Wait)"));
                     timer++;
                 } else {
-                    addItem(makeNarrator("Choose an option from the options"));
+                    addItem(makeNarrator("Choose an option from the Parentheses"));
                     addItem(makeOptions("(Examine, Go through door, Go through hole, Wait)"));
                     break;
                 }
@@ -130,7 +132,7 @@ printStory0 = function() {
                     timer++;
                     room1();
                 } else {
-                    addItem(makeNarrator("Choose an option from the options"));
+                    addItem(makeNarrator("Choose an option from the Parentheses"));
                     addItem(makeOptions("(Left, Right, Back)"));
                     break;
                 }
@@ -161,7 +163,7 @@ printStory0 = function() {
                 if (weapon === ""){
                     addItem(makeOptions("(Examine, Leave)"));
                 } else {
-                    addItem(makeNarrator("Choose an option from the options"));
+                    addItem(makeNarrator("Choose an option from the Parentheses"));
                     addItem(makeOptions("(Examine, Leave, Wreck the Computer)"));
                 }
                 break;
@@ -180,7 +182,7 @@ printStory0 = function() {
                         timer++;
                         room1();
                     } else {
-                        addItem(makeNarrator("Choose an option from the options"));
+                        addItem(makeNarrator("Choose an option from the Parentheses"));
                         addItem(makeOptions("(Left, Right, Back)"));
                         break;
                     }
@@ -227,7 +229,7 @@ room1 = function() {
     addItem(makeNarrator("What do you do?"));
     addItem(makeOptions("(Examine, Go through door, Go through hole, Wait)"));
     currentRoom = 1;
-    visited1 = true;
+    visited1 = true;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
 };
 room2 = function() {
     if (visited2 === false){
@@ -241,9 +243,6 @@ room2 = function() {
     visited2 = true;
     currentRoom = 2;
 };
-//3 is a computer that you have to beat up
-//4 is a room full of weapons that you can choose from
-//When you are in room 3, if weapon != null, have another option to wreck the computer."
 room3 = function() {
     if (visited3 === false){
         addItem(makeNarrator("You walk in and there is a large computer."));
@@ -253,7 +252,7 @@ room3 = function() {
     addItem(makeNarrator("What do you do?"));
     if (weapon === ""){
         addItem(makeOptions("(Examine, Exit)"));
-    } else {
+    } else if (weapon !== "" && open === false){
         addItem(makeOptions("(Examine, Exit, Wreck the Computer)"));
     }
     currentRoom = 3;
