@@ -13,24 +13,21 @@ print = function(){
 */
 window.onload = function() {
     
-var input, output, addItem, continueIfEnter, makeReply, makeNarrator, makeOptions, addStory, openDoor, printStory0;
+var input, output, addItem, continueIfEnter, makeReply, makeNarrator, makeOptions, printStory0;
+var weaponListMaker, equipWeapon, addWeapon;
 var room1, room2, room3, room4;
-var visited1, visited2, visited3, visited4;
-var began = false, end = false, open = false, timer = 0, weapon = "";
+var visited1 = false, visited2 = false, visited3 = false, visited4 = false;
+var began = false, end = false, open = false, equipping = false, timer = 0, weapon = "", oldWeapon = "";
+var vowels = ["a", "e", "i", "o", "u"];
 var reply = "";
 var currentRoom = 1;
-
+var weapons =["sword", "hammer", "axe", "chainsaw"];
+var weaponList = "";
 addItem = function(x) {
         output.appendChild(x);
         var br = document.createElement("br");
         output.appendChild(br);
     };
-addStory = function(narrator, options) {
-    output.appendChild(narrator);
-    output.appendChild(options);
-    var br = document.createElement("br");
-    output.appendChild(br);
-};
 makeNarrator = function(narrator) {
     var newItem = document.createElement("li");
         newItem.className = "narrator";
@@ -72,9 +69,10 @@ makeReply = function(theReply) {
     //begin, yesStart
     //hasn't started, says yes to start. yesStart is true but begin is false;
 printStory0 = function() {
-    timer++
+    timer++;
     if (began === false){
         if (reply === "yes"){
+            began = true;
             room1();
         } else if (reply === "no"){
             addItem(makeNarrator("IF YOU AREN'T READY, WHY ARE YOU HERE?"));
@@ -82,7 +80,7 @@ printStory0 = function() {
             end = true;
         } else {
             addItem(makeNarrator("Choose an option from the options"));
-            addStory(makeNarrator("This is the first text-based adventure on the site. Are you ready?"));
+            addItem(makeNarrator("This is the first text-based adventure on the site. Are you ready?"));
             addItem(makeOptions("(Yes, No)"));
         }
     } else if (began == true){
@@ -138,10 +136,74 @@ printStory0 = function() {
                 }
                 break;
             case 3:
-                room3();
+                if (reply === "examine") {
+                    addItem(makeNarrator("Upon further inspection, you realize this computer controls the entire building."));
+                    addItem(makeNarrator("However, its controls seem too complicated for you to understand"));
+                    timer++;
+                    
+                } else if (reply === "leave") {
+                    timer++;
+                    room2();
+                    break;
+                } else if (reply === "wreck the computer") {
+                    if (weapon !== null){
+                        addItem(makeNarrator("Using your " + weapon + ", you wreck the computer a ton."));
+                        addItem(makeNarrator("The building's system is now down."));
+                        open = true;
+                    } else {
+                        addItem(makeNarrator("Ok, I'm guessing you've played the game already"));
+                        addItem(makeNarrator("Since you don't have a weapon, this shouldn't be an option"));
+                        addItem(makeNarrator("Y u tryna cheat, man?"));
+                        window.location = "https://youtu.be/dQw4w9WgXcQ";
+                    }
+                }
+                addItem(makeNarrator("What do you do?"));
+                if (weapon === ""){
+                    addItem(makeOptions("(Examine, Leave)"));
+                } else {
+                    addItem(makeNarrator("Choose an option from the options"));
+                    addItem(makeOptions("(Examine, Leave, Wreck the Computer)"));
+                }
                 break;
             case 4:
-                room4();
+                if (equipping === false) {
+                    if (reply === "take a weapon") {
+                        weaponListMaker();
+                        addItem(makeNarrator("What weapon will you take?"));
+                        addItem(makeOptions(weaponList));
+                        equipping = true;
+                        timer++;
+                    } else if (reply === "leave") {
+                        timer++;
+                        room2();
+                    } else if (reply === "back") {
+                        timer++;
+                        room1();
+                    } else {
+                        addItem(makeNarrator("Choose an option from the options"));
+                        addItem(makeOptions("(Left, Right, Back)"));
+                        break;
+                    }
+                } else if (equipping === true) {
+                    oldWeapon = weapon;
+                    equipWeapon(reply);
+                    if(weapon !== oldWeapon){
+                        if (oldWeapon === ""){
+                            addItem(makeNarrator("You equipped the " + weapon + "."));
+                        } else if (oldWeapon !== "") {
+                            addWeapon(oldWeapon);
+                            addItem(makeNarrator("You replace your " + oldWeapon + " with a " + weapon + "."));
+                        }
+                    } else if(weapon === oldWeapon){
+                        addItem(makeNarrator("I don't think that's a weapon..."));
+                    }
+                    weaponListMaker();
+                    addItem(makeNarrator(weaponList));
+                    addItem(makeNarrator("What do you do?"));
+                    addItem(makeOptions("(Take a weapon, Leave)"));
+                    equipping = false;
+                    
+                }
                 break;
         }
         
@@ -156,7 +218,7 @@ printStory0 = function() {
 
 room1 = function() {
     if (visited1 === false){
-        addItem(makeNarrator("Ok so you wake up in a white room you woke up."));
+        addItem(makeNarrator("Ok so you wake up in a white room."));
     } else {
         addItem(makeNarrator("You are in the white room."));
     }
@@ -184,12 +246,12 @@ room2 = function() {
 //When you are in room 3, if weapon != null, have another option to wreck the computer."
 room3 = function() {
     if (visited3 === false){
-        addItem(makeNarrator("There is a large computer."));
+        addItem(makeNarrator("You walk in and there is a large computer."));
     } else {
-        addItem(makeNarrator("You are in the white room."));
+        addItem(makeNarrator("You are in the computer room."));
     }
     addItem(makeNarrator("What do you do?"));
-    if (weapon === null){
+    if (weapon === ""){
         addItem(makeOptions("(Examine, Exit)"));
     } else {
         addItem(makeOptions("(Examine, Exit, Wreck the Computer)"));
@@ -198,72 +260,47 @@ room3 = function() {
     visited3 = true;
 };
 room4 = function() {
-    if (visited1 === false){
-        addItem(makeNarrator("Ok so you wake up in a white room you woke up."));
+    if (visited4 === false){
+        addItem(makeNarrator("You walk into a room full of weapons"));
     } else {
-        addItem(makeNarrator("You are in the white room."));
+        addItem(makeNarrator("You are in the room full of weapons;"));
     }
-    addItem(makeNarrator("There's nothing in it but a metal door and a hole opposite of the door."));
+    weaponListMaker();
+    addItem(makeNarrator(weaponList));
     addItem(makeNarrator("What do you do?"));
-    addItem(makeOptions("(Examine, Go through door, Go through hole, Wait)"));
+    addItem(makeOptions("(Take a weapon, Leave)"));
     currentRoom = 4;
     visited4 = true;
 };
 
-
-
-openDoor = function() {
-    if(open === false) {
+weaponListMaker = function(){
+    weaponList = "There is a";
+    for (var i = 0; i != weapons.length - 1; i++){
+        for (var j = 0; j != vowels.length - 1; j++){
+            if(weapons[i].charAt(0) === vowels[j]){
+                weaponList = weaponList + "n";
+            }
+        }
         
+        weaponList = weaponList + " " + weapons[i] + ", a";
+    }
+    weaponList = weaponList + "nd a " + weapons[weapons.length - 1] + ".";
+};
+equipWeapon = function(request){
+    var i = weapons.indexOf(request);
+    if(i > -1) {
+        weapon = request;
+        weapons.splice(i, 1);
     }
 };
+addWeapon = function(request){
+    weapons.push(request);
+};
+
+
+
 input = document.getElementById('input');    
 output = document.getElementById('output');
 
 input.onkeypress = continueIfEnter;
 };
-/*
-var wait4Enter = true;
-var printed = false;
-do {
-    if (wait4Enter === true) {
-        if (printed === false){
-            addStory(makeNarrator("Text"),makeOptions("Also Text"));
-            printed = true;
-        }
-        input.onkeypress = addItemIfEnter;
-        } else {
-            setTimeout(check, 1000); // check again in a second
-    }
-} while (wait4Enter === true);
-console.log(reply);
-console.log("Holy heck it works");
-};
-*/
-/*
-var zombie = {
-        
-        
-        alert("The year is 20ZZ. Zombies exist now. It's kinda scary");
-        var go = false;
-        do {
-            action = prompt("You are walking down the street when suddenly, you see a zombie walking towards you! You can: walk the other way, strike up a conversation, or punch him in the schnozz. What will you do: walk, talk, or fight?");
-            if (action == "walk") {
-                alert("Lucky for you, zombies can't walk fast. You hastily speed walk away from danger and you live another day. You Win!");
-                go = true;
-            } else if (action == "talk") {
-                alert("You stop what you're doing and start talking to the zombie. It turns out, zombies don't eat brains. It was just a racial stereotype that early Americans created. It turns out, the zombie's name is Tom, and he wants to be a software engineer. Good for him. Good for you. You Win.");
-                go = true;
-            } else if (action == "fight") {
-                alert("You feel a surge of adrenalin as you stop walking towards the zombie. You will your hand to burst into flames and you run towards the zombie and deck him in the face. He falls down and starts to cry about \"How much it hurts\" and \"how he has a family\". Soon, the zombie is no more. You Win?");
-                go = true;
-            } else if (action == "walk, talk, or fight") {
-                alert("OH YOU THINK YOU'RE SOO CLEVER, EH BOY?");
-                go = true;
-            } else {
-                alert("type walk, talk, or fight. Lets try again.");
-            }
-
-        } while (go === false);
-    };
-    */
