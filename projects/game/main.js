@@ -21,7 +21,7 @@ var began = false, end = false, open = false, equipping = false, timer = 0, weap
 var vowels = ["a", "e", "i", "o", "u"];
 var reply = "";
 var currentRoom = 1;
-var weapons =["sword", "hammer", "axe", "chainsaw"];
+var weapons =["sword", "hammer", "axe", "chainsaw", "shovel"];
 var weaponList = "";
 
 //var focus = window.getElementById('focus');
@@ -53,9 +53,11 @@ makeOptions = function(options) {
 continueIfEnter = function(e) {
         if (e.which === 13 && input.value !== "" && end === false) {
             reply = (input.value).toLowerCase();
-            addItem(makeReply(reply));
+            var replyString = reply.charAt(0).toUpperCase() + reply.slice(1);
+            addItem(makeReply(replyString));
             //continue with story
             printStory0();
+            
             input.value = "";
             //
         }
