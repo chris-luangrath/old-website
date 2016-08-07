@@ -2,3 +2,39 @@
 2. Add a combat section (when you destroy the computer, alarms sounds, man stops you)
 4. ????
 5. Profit
+
+around 170/175, What do you do? is messed up
+{
+(Examine, Exit, Wreck the Computer)
+
+Wreck the computer
+Using your sword, you wreck the computer a ton.
+
+The building's system is now down.
+
+Despite this, an alarm starts to blare.
+
+Don't think about it too much.
+
+What do you do?
+
+Choose an option from the Parentheses
+
+(Examine, Leave, Wreck the Computer)
+
+}
+
+{
+    What do you do in return? (Choose a Number)
+
+1. Say "Yes I am!"
+
+2. Say "Dang it"
+
+3. Say "Why not?"
+
+4. Charge with "yoursword"
+}
+
+after i replied to what do you do in return, it stopped
+i added an "else" statement for that so fix it later

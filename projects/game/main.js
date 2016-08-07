@@ -22,7 +22,7 @@ var visited1 = false, visited2 = false, visited3 = false, visited4 = false;
 var began = false, end = false, open = false, equipping = false, fought = false, timer = 0, weapon = "", oldWeapon = "";
 var vowels = ["a", "e", "i", "o", "u"];
 var reply = "";
-var currentRoom = 1;
+var status = 1;
 var weapons =["sword", "hammer", "axe", "chainsaw", "shovel"];
 var weaponList = "";
 var extraHit = false
@@ -96,7 +96,7 @@ printStory0 = function() {
             addOptions("(Yes, No)");
         }
     } else if (began == true){
-        switch (currentRoom) {
+        switch (status) {
             case 1:
                 if (reply === "examine") {
                     addNarrator("There's nothing but the door and the hole in the wall.");
@@ -237,8 +237,13 @@ printStory0 = function() {
                     addNarrator("You are now initiated in battle!");
                     extraHit = true;
                     robotBattle();
+                } else {
+                    
                 }
-                
+                break;
+            case "battle":
+                robotBattle();
+                break;
         }
     } else {
         addNarrator("You broke the game. I'm not sure how you did it, but you did.");
@@ -259,7 +264,7 @@ room1 = function() {
         addOptions("2. Say \"Dang it\"");
         addOptions("3. Say \"Why not?\"");
         addOptions("4. Charge with your" + weapon);
-        currentRoom = "talking";
+        status = "talking";
     } else {
         if (visited1 === false){
             addNarrator("Ok so you wake up in a white room.");
@@ -270,7 +275,7 @@ room1 = function() {
         addNarrator("The hole is large enough to enter");
         addNarrator("What do you do?");
         addOptions("(Examine, Go through door, Go through hole, Wait)");
-        currentRoom = 1;
+        status = 1;
         visited1 = true;
     }
     
@@ -286,7 +291,7 @@ room2 = function() {
     addNarrator("What will you do?");
     addOptions("(Left, Right, Back)");
     visited2 = true;
-    currentRoom = 2;
+    status = 2;
 };
 room3 = function() {
     if (visited3 === false){
@@ -300,7 +305,7 @@ room3 = function() {
     } else if (weapon !== "" && open === false){
         addOptions("(Examine, Exit, Wreck the Computer)");
     }
-    currentRoom = 3;
+    status = 3;
     visited3 = true;
 };
 room4 = function() {
@@ -313,7 +318,7 @@ room4 = function() {
     addNarrator(weaponList);
     addNarrator("What do you do?");
     addOptions("(Take a weapon, Leave)");
-    currentRoom = 4;
+    status = 4;
     visited4 = true;
 };
 
@@ -351,6 +356,7 @@ check = function(){
 };
 
 robotBattle = function(){
+    status = "battle";
     addNarrator("Your Health: " + HP);
     addNarrator("Robot's Health: " + robotHP);
     weaponCheck();
@@ -369,8 +375,13 @@ robotBattle = function(){
     } else {
         addNarrator("You tried to attack the robot but you failed.");
         damage = 10;
-        HP
+        HP = HP - damage;
         addNarrator("Instead, the robot bops you on the head for " + damage + " HP");
+        addNarrator("Attack Again");
+        addOptions("(Attack)");
+    }
+    if (robotHP <= 0){
+        fought = true;
         
     }
 };
