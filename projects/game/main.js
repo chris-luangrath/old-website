@@ -13,17 +13,19 @@ print = function(){
 */
 window.onload = function() {
     
-var input, output, addItem, continueIfEnter, makeReply, makeNarrator, makeOptions, printStory0;
+var input, output, addItem,  makeReply, makeNarrator, makeOptions;
+var addNarrator, addOptions;
+var continueIfEnter, printStory0;
 var weaponListMaker, equipWeapon, addWeapon;
-var room1, room2, room3, room4;
+var room1, room2, room3, room4, robotBattle;
 var visited1 = false, visited2 = false, visited3 = false, visited4 = false;
-var began = false, end = false, open = false, equipping = false, timer = 0, weapon = "", oldWeapon = "";
+var began = false, end = false, open = false, equipping = false, fought = false, timer = 0, weapon = "", oldWeapon = "";
 var vowels = ["a", "e", "i", "o", "u"];
 var reply = "";
 var currentRoom = 1;
 var weapons =["sword", "hammer", "axe", "chainsaw", "shovel"];
 var weaponList = "";
-
+var extraHit = false
 //var focus = window.getElementById('focus');
 
 addItem = function(x) {
@@ -31,6 +33,12 @@ addItem = function(x) {
         var br = document.createElement("br");
         output.appendChild(br);
     };
+addNarrator = function(text){
+    addItem(makeNarrator(text));
+};
+addOptions = function(text) {
+    addItem(makeOptions(text));
+};
 makeNarrator = function(narrator) {
     var newItem = document.createElement("li");
         newItem.className = "narrator";
@@ -79,47 +87,47 @@ printStory0 = function() {
             began = true;
             room1();
         } else if (reply === "no"){
-            addItem(makeNarrator("IF YOU AREN'T READY, WHY ARE YOU HERE?"));
-            addItem(makeNarrator("If your goal was to be a loser, you achieved that"));
+            addNarrator("IF YOU AREN'T READY, WHY ARE YOU HERE?");
+            addNarrator("If your goal was to be a loser, you achieved that");
             end = true;
         } else {
-            addItem(makeNarrator("Choose an option from the Parentheses"));
-            addItem(makeNarrator("Are you ready to escape the Building?"));
-            addItem(makeOptions("(Yes, No)"));
+            addNarrator("Choose an option from the Parentheses");
+            addNarrator("Are you ready to escape the Building?");
+            addOptions("(Yes, No)");
         }
     } else if (began == true){
         switch (currentRoom) {
             case 1:
                 if (reply === "examine") {
-                    addItem(makeNarrator("There's nothing but the door and the hole in the wall."));
-                    addItem(makeNarrator("What do you do?"));
-                    addItem(makeOptions("(Examine, Go through door, Go through hole, Wait)"));
+                    addNarrator("There's nothing but the door and the hole in the wall.");
+                    addNarrator("What do you do?");
+                    addOptions("(Examine, Go through door, Go through hole, Wait)");
                     timer++;
                 } else if (reply === "go through door") {
                     if (open === false) {
-                        addItem(makeNarrator("The door is locked."));
-                        addItem(makeNarrator("What do you do?"));
-                        addItem(makeOptions("(Examine, Go through door, Go through hole, Wait)"));
+                        addNarrator("The door is locked.");
+                        addNarrator("What do you do?");
+                        addOptions("(Examine, Go through door, Go through hole, Wait)");
                         timer++;
                     } else if (open === true) {
-                        addItem(makeNarrator("You did it in " + timer + " turns! Good Job!"));
-                        addItem(makeNarrator("Maybe someday I'll make the game longer..."));
-                        addItem(makeNarrator("This really was just a test of my coding abilities."));
-                        addItem(makeNarrator("Thank you for visiting my site and checking out my stuff!"));
-                        addItem(makeNarrator("It really means a lot!"));
+                        addNarrator("You did it in " + timer + " turns! Good Job!");
+                        addNarrator("Maybe someday I'll make the game longer...");
+                        addNarrator("This really was just a test of my coding abilities.");
+                        addNarrator("Thank you for visiting my site and checking out my stuff!");
+                        addNarrator("It really means a lot!");
                     }
                     
                 } else if (reply === "go through hole") {
                     timer++;
                     room2();
                 } else if (reply === "wait") {
-                    addItem(makeNarrator("You sit down and wait."));
-                    addItem(makeNarrator("What do you do?"));
-                    addItem(makeOptions("(Examine, Go through door, Go through hole, Wait)"));
+                    addNarrator("You sit down and wait.");
+                    addNarrator("What do you do?");
+                    addOptions("(Examine, Go through door, Go through hole, Wait)");
                     timer++;
                 } else {
-                    addItem(makeNarrator("Choose an option from the Parentheses"));
-                    addItem(makeOptions("(Examine, Go through door, Go through hole, Wait)"));
+                    addNarrator("Choose an option from the Parentheses");
+                    addOptions("(Examine, Go through door, Go through hole, Wait)");
                     break;
                 }
                 break;
@@ -134,15 +142,15 @@ printStory0 = function() {
                     timer++;
                     room1();
                 } else {
-                    addItem(makeNarrator("Choose an option from the Parentheses"));
-                    addItem(makeOptions("(Left, Right, Back)"));
+                    addNarrator("Choose an option from the Parentheses");
+                    addOptions("(Left, Right, Back)");
                     break;
                 }
                 break;
             case 3:
                 if (reply === "examine") {
-                    addItem(makeNarrator("Upon further inspection, you realize this computer controls the entire building."));
-                    addItem(makeNarrator("However, its controls seem too complicated for you to understand"));
+                    addNarrator("Upon further inspection, you realize this computer controls the entire building.");
+                    addNarrator("However, its controls seem too complicated for you to understand");
                     timer++;
                     
                 } else if (reply === "leave") {
@@ -151,30 +159,32 @@ printStory0 = function() {
                     break;
                 } else if (reply === "wreck the computer") {
                     if (weapon !== null){
-                        addItem(makeNarrator("Using your " + weapon + ", you wreck the computer a ton."));
-                        addItem(makeNarrator("The building's system is now down."));
+                        addNarrator("Using your " + weapon + ", you wreck the computer a ton.");
+                        addNarrator("The building's system is now down.");
+                        addNarrator("Despite this, an alarm starts to blare.");
+                        addNarrator("Don't think about it too much.");
                         open = true;
                     } else {
-                        addItem(makeNarrator("Ok, I'm guessing you've played the game already"));
-                        addItem(makeNarrator("Since you don't have a weapon, this shouldn't be an option"));
-                        addItem(makeNarrator("Y u tryna cheat, man?"));
+                        addNarrator("Ok, I'm guessing you've played the game already");
+                        addNarrator("Since you don't have a weapon, this shouldn't be an option");
+                        addNarrator("Y u tryna cheat, man?");
                         window.location = "https://youtu.be/dQw4w9WgXcQ";
                     }
                 }
-                addItem(makeNarrator("What do you do?"));
+                addNarrator("What do you do?");
                 if (weapon === ""){
-                    addItem(makeOptions("(Examine, Leave)"));
+                    addOptions("(Examine, Leave)");
                 } else {
-                    addItem(makeNarrator("Choose an option from the Parentheses"));
-                    addItem(makeOptions("(Examine, Leave, Wreck the Computer)"));
+                    addNarrator("Choose an option from the Parentheses");
+                    addOptions("(Examine, Leave, Wreck the Computer)");
                 }
                 break;
             case 4:
                 if (equipping === false) {
                     if (reply === "take a weapon") {
                         weaponListMaker();
-                        addItem(makeNarrator("What weapon will you take?"));
-                        addItem(makeOptions(weaponList));
+                        addNarrator("What weapon will you take?");
+                        addOptions(weaponList);
                         equipping = true;
                         timer++;
                     } else if (reply === "leave") {
@@ -184,8 +194,8 @@ printStory0 = function() {
                         timer++;
                         room1();
                     } else {
-                        addItem(makeNarrator("Choose an option from the Parentheses"));
-                        addItem(makeOptions("(Left, Right, Back)"));
+                        addNarrator("Choose an option from the Parentheses");
+                        addOptions("(Left, Right, Back)");
                         break;
                     }
                 } else if (equipping === true) {
@@ -193,85 +203,176 @@ printStory0 = function() {
                     equipWeapon(reply);
                     if(weapon !== oldWeapon){
                         if (oldWeapon === ""){
-                            addItem(makeNarrator("You equipped the " + weapon + "."));
+                            addNarrator("You equipped the " + weapon + ".");
                         } else if (oldWeapon !== "") {
                             addWeapon(oldWeapon);
-                            addItem(makeNarrator("You replace your " + oldWeapon + " with a " + weapon + "."));
+                            addNarrator("You replace your " + oldWeapon + " with a " + weapon + ".");
                         }
                     } else if(weapon === oldWeapon){
-                        addItem(makeNarrator("I don't think that's a weapon..."));
+                        addNarrator("I don't think that's a weapon...");
                     }
                     weaponListMaker();
-                    addItem(makeNarrator(weaponList));
-                    addItem(makeNarrator("What do you do?"));
-                    addItem(makeOptions("(Take a weapon, Leave)"));
+                    addNarrator(weaponList);
+                    addNarrator("What do you do?");
+                    addOptions("(Take a weapon, Leave)");
                     equipping = false;
                     
                 }
                 break;
+            case "talking":
+                if(reply === "1"){
+                    addNarrator("The robot says, \"I disagree\".");
+                    addNarrator("You are now initiated in battle!");
+                    robotBattle();
+                } else if(reply === "2"){
+                    addNarrator("The robot says, \"You're not going anywhere.\"");
+                    addNarrator("You are now initiated in battle!");
+                    robotBattle();
+                } else if(reply === "3"){
+                    addNarrator("The robot says, \"Don't ask.\"");
+                    addNarrator("You are now initiated in battle!");
+                    robotBattle();
+                } else if (reply === "4"){
+                    addNarrator("You charge at the robot. You get a free hit");
+                    addNarrator("You are now initiated in battle!");
+                    extraHit = true;
+                    robotBattle();
+                }
+                
         }
-        
     } else {
-        addItem(makeNarrator("You broke the game. I'm not sure how you did it, but you did."));
-        addItem(makeNarrator("You're a hacker now. You bested me and the system. Good for you."));
-        addItem(makeNarrator("You win I guess"));
+        addNarrator("You broke the game. I'm not sure how you did it, but you did.");
+        addNarrator("You're a hacker now. You bested me and the system. Good for you.");
+        addNarrator("You win I guess");
         end = true;
     }
     
 };
 
 room1 = function() {
-    if (visited1 === false){
-        addItem(makeNarrator("Ok so you wake up in a white room."));
+    
+    if (open === true && fought === false){
+        addNarrator("You run into the white room, but there is now a robot blocking the door.");
+        addNarrator("The robot says, \"You're not escaping\"");
+        addNarrator("What do you do in return? (Choose a Number)");
+        addOptions("1. Say \"Yes I am!\"");
+        addOptions("2. Say \"Dang it\"");
+        addOptions("3. Say \"Why not?\"");
+        addOptions("4. Charge with your" + weapon);
+        currentRoom = "talking";
     } else {
-        addItem(makeNarrator("You are in the white room."));
+        if (visited1 === false){
+            addNarrator("Ok so you wake up in a white room.");
+        } else {
+            addNarrator("You are in the white room.");
+        }
+        addNarrator("There's nothing in it but a metal door and a hole opposite of the door.");
+        addNarrator("The hole is large enough to enter");
+        addNarrator("What do you do?");
+        addOptions("(Examine, Go through door, Go through hole, Wait)");
+        currentRoom = 1;
+        visited1 = true;
     }
-    addItem(makeNarrator("There's nothing in it but a metal door and a hole opposite of the door."));
-    addItem(makeNarrator("The hole is large enough to enter"));
-    addItem(makeNarrator("What do you do?"));
-    addItem(makeOptions("(Examine, Go through door, Go through hole, Wait)"));
-    currentRoom = 1;
-    visited1 = true;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         
+    
+    
 };
 room2 = function() {
     if (visited2 === false){
-        addItem(makeNarrator("You find 2 hallways through the hole."));
+        addNarrator("You find 2 hallways through the hole.");
     } else {
-        addItem(makeNarrator("You return to where the other rooms meet."));
+        addNarrator("You return to where the other rooms meet.");
     }
-    addItem(makeNarrator("There are two hallways on each side of you and the room you first came from."));
-    addItem(makeNarrator("What will you do?"));
-    addItem(makeOptions("(Left, Right, Back)"));
+    addNarrator("There are two hallways on each side of you and the room you first came from.");
+    addNarrator("What will you do?");
+    addOptions("(Left, Right, Back)");
     visited2 = true;
     currentRoom = 2;
 };
 room3 = function() {
     if (visited3 === false){
-        addItem(makeNarrator("You walk in and there is a large computer."));
+        addNarrator("You walk in and there is a large computer.");
     } else {
-        addItem(makeNarrator("You are in the computer room."));
+        addNarrator("You are in the computer room.");
     }
-    addItem(makeNarrator("What do you do?"));
+    addNarrator("What do you do?");
     if (weapon === ""){
-        addItem(makeOptions("(Examine, Exit)"));
+        addOptions("(Examine, Exit)");
     } else if (weapon !== "" && open === false){
-        addItem(makeOptions("(Examine, Exit, Wreck the Computer)"));
+        addOptions("(Examine, Exit, Wreck the Computer)");
     }
     currentRoom = 3;
     visited3 = true;
 };
 room4 = function() {
     if (visited4 === false){
-        addItem(makeNarrator("You walk into a room full of weapons"));
+        addNarrator("You walk into a room full of weapons");
     } else {
-        addItem(makeNarrator("You are in the room full of weapons;"));
+        addNarrator("You are in the room full of weapons;");
     }
     weaponListMaker();
-    addItem(makeNarrator(weaponList));
-    addItem(makeNarrator("What do you do?"));
-    addItem(makeOptions("(Take a weapon, Leave)"));
+    addNarrator(weaponList);
+    addNarrator("What do you do?");
+    addOptions("(Take a weapon, Leave)");
     currentRoom = 4;
     visited4 = true;
+};
+
+var HP = 100, robotHP = 200;
+var chance, attack, check, damage, d20;
+var weaponCheck;
+weaponCheck = function(){
+    switch (weapon) {
+        case "sword":
+            attack = 16;
+            chance = 19;
+            break;
+        case "hammer":
+            attack = 17;
+            chance = 14;
+            break;
+        case "axe":
+            attack = 18;
+            chance = 13;
+            break;
+        case "chainsaw":
+            attack = 22;
+            chance = 15;
+            break;
+        case "shovel":
+            attack = 18;
+            chance = 18;
+    }
+};
+d20 = function(){
+    return Math.floor((Math.random() * 20) + 1);
+};
+check = function(){
+    return (d20() + chance)/2;
+};
+
+robotBattle = function(){
+    addNarrator("Your Health: " + HP);
+    addNarrator("Robot's Health: " + robotHP);
+    weaponCheck();
+    if (extraHit == true){
+        damage = d20() + attack;
+        
+        addNarrator("You get a surprise attack on the robot for " + damage + " HP");
+        robotHP = robotHP - damage;
+        extraHit = false;
+    }
+    if (d20() === 20) {
+        
+    } else if (check() > d20()){
+        damage = d20() + attack;
+        addNarrator("You attack the robot for " + damage + "HP");
+    } else {
+        addNarrator("You tried to attack the robot but you failed.");
+        damage = 10;
+        HP
+        addNarrator("Instead, the robot bops you on the head for " + damage + " HP");
+        
+    }
 };
 
 weaponListMaker = function(){
