@@ -27,3 +27,24 @@ Choose an option from the Parentheses
 
 after i replied to what do you do in return, it stopped
 i added an "else" statement for that so fix it later
+
+
+
+<article class="grid buildingEscape">
+                <div class="shift">
+                     <h1>building escape</h1>
+                    <div class="project-text">
+                        <div class="project-text">The most complex Choose Your Own</div>
+                        <div class="project-text">Adventure on the site!</div>
+                        <div class="project-text">My final project</div>
+                    </div>
+                </div>
+                <div class="center other">
+                    <div class="overlay">
+                        <img class="project" onclick="location.href='projects/birthday2/index.html;" src="images/projects/preTodo.jpg"></img>
+                    </div>
+                    <!--<div class="scroll-up">Hey Click Me</div>-->
+                </div>
+                <div class="center">Click the image to check it out</div>
+                <br>
+            </article>

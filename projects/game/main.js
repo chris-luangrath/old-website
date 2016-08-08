@@ -316,7 +316,7 @@ room3 = function() {
     }
     addNarrator("What do you do?");
     if (weapon === ""){
-        addOptions("(Examine, leave)");
+        addOptions("(Examine, Leave)");
     } else if (weapon !== "" && open === false){
         addOptions("(Examine, Wreck the Computer, Leave )");
     }
