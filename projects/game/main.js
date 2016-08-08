@@ -187,7 +187,7 @@ printStory0 = function() {
                         addOptions("(Examine, Wreck the Computer, Leave )");
                     }
                     else {
-                        addOptions("(Examine, Leave )");
+                        addOptions("(Examine, Leave)");
                     }
                 }
                 break;
