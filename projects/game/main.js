@@ -138,12 +138,12 @@ printStory0 = function() {
                 } else if (reply === "right") {
                     timer++;
                     room4();
-                } else if (reply === "back") {
+                } else if (reply === "leave") {
                     timer++;
                     room1();
                 } else {
                     addNarrator("Choose an option from the Parentheses");
-                    addOptions("(Left, Right, Back)");
+                    addOptions("(Left, Right, Leave)");
                     break;
                 }
                 break;
@@ -304,7 +304,7 @@ room2 = function() {
     }
     addNarrator("There are two hallways on each side of you and the room you first came from.");
     addNarrator("What will you do?");
-    addOptions("(Left, Right, Back)");
+    addOptions("(Left, Right, Leave)");
     visited2 = true;
     status = 2;
 };
@@ -383,23 +383,27 @@ robotBattle = function(){
         extraHit = false;
     }
     if (d20() === 20) {
-        
+        damage = d20() + (attack * 2);
+        robotHP = robotHP - damage;
+        addNarrator("You get a critical hit on the robot for " + damage + "HP");
     } else if (check() > d20()){
         damage = d20() + attack;
+        robotHP = robotHP - damage;
         addNarrator("You attack the robot for " + damage + "HP");
     } else {
         addNarrator("You tried to attack the robot but you failed.");
         damage = 10;
         HP = HP - damage;
         addNarrator("Instead, the robot bops you on the head for " + damage + " HP");
-        addNarrator("Attack Again");
-        addOptions("(Attack)");
     }
     if (robotHP <= 0){
         fought = true;
         addNarrator("You land the final blow and the robot falls apart.");
         addNarrator("You get 50 XP.");
         room1();
+    } else {
+        addNarrator("Attack Again");
+        addOptions("(Attack)");
     }
 };
 
