@@ -5,7 +5,7 @@
 
 around 170/175, What do you do? is messed up
 {
-(Examine, Exit, Wreck the Computer)
+(Examine, Wreck the Computer, Exit )
 
 Wreck the computer
 Using your sword, you wreck the computer a ton.
@@ -24,17 +24,6 @@ Choose an option from the Parentheses
 
 }
 
-{
-    What do you do in return? (Choose a Number)
-
-1. Say "Yes I am!"
-
-2. Say "Dang it"
-
-3. Say "Why not?"
-
-4. Charge with "yoursword"
-}
 
 after i replied to what do you do in return, it stopped
 i added an "else" statement for that so fix it later

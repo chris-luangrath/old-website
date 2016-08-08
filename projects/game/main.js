@@ -121,7 +121,7 @@ printStory0 = function() {
                     timer++;
                     room2();
                 } else if (reply === "wait") {
-                    addNarrator("You sit down and wait.");
+                    addNarrator("You sit down and wait. Congratulations");
                     addNarrator("What do you do?");
                     addOptions("(Examine, Go through door, Go through hole, Wait)");
                     timer++;
@@ -149,10 +149,14 @@ printStory0 = function() {
                 break;
             case 3:
                 if (reply === "examine") {
+                    if (open === false){
                     addNarrator("Upon further inspection, you realize this computer controls the entire building.");
                     addNarrator("However, its controls seem too complicated for you to understand");
+                    } else {
+                        addNarrator("Upon further inspection, you realize this computer controls is thoroughly wrecked");
+                        addNarrator("The alarms are pretty loud. You should probably go");
+                    }
                     timer++;
-                    
                 } else if (reply === "leave") {
                     timer++;
                     room2();
@@ -176,7 +180,12 @@ printStory0 = function() {
                     addOptions("(Examine, Leave)");
                 } else {
                     addNarrator("Choose an option from the Parentheses");
-                    addOptions("(Examine, Leave, Wreck the Computer)");
+                    if (weapon !== "" && open === false){
+                        addOptions("(Examine, Wreck the Computer, Leave )");
+                    }
+                    else {
+                        addOptions("(Examine, Leave )");
+                    }
                 }
                 break;
             case 4:
@@ -190,12 +199,11 @@ printStory0 = function() {
                     } else if (reply === "leave") {
                         timer++;
                         room2();
-                    } else if (reply === "back") {
-                        timer++;
-                        room1();
-                    } else {
+                    }  else {
                         addNarrator("Choose an option from the Parentheses");
-                        addOptions("(Left, Right, Back)");
+                        addNarrator("What do you do?");
+                        addOptions("(Take a weapon, Leave)");
+                        timer++;
                         break;
                     }
                 } else if (equipping === true) {
@@ -210,6 +218,7 @@ printStory0 = function() {
                         }
                     } else if(weapon === oldWeapon){
                         addNarrator("I don't think that's a weapon...");
+                        addNarrator("Choose an option from the Parentheses");
                     }
                     weaponListMaker();
                     addNarrator(weaponList);
@@ -238,7 +247,12 @@ printStory0 = function() {
                     extraHit = true;
                     robotBattle();
                 } else {
-                    
+                    addNarrator("Choose an option from the Parentheses");
+                    addOptions("1. Say \"Yes I am!\"");
+                    addOptions("2. Say \"Dang it\"");
+                    addOptions("3. Say \"Why not?\"");
+                    addOptions("4. Charge with your " + weapon);
+                    addOptions("(1, 2, 3, 4");
                 }
                 break;
             case "battle":
@@ -263,7 +277,8 @@ room1 = function() {
         addOptions("1. Say \"Yes I am!\"");
         addOptions("2. Say \"Dang it\"");
         addOptions("3. Say \"Why not?\"");
-        addOptions("4. Charge with your" + weapon);
+        addOptions("4. Charge with your " + weapon);
+        addOptions("(1, 2, 3, 4)");
         status = "talking";
     } else {
         if (visited1 === false){
@@ -301,9 +316,9 @@ room3 = function() {
     }
     addNarrator("What do you do?");
     if (weapon === ""){
-        addOptions("(Examine, Exit)");
+        addOptions("(Examine, leave)");
     } else if (weapon !== "" && open === false){
-        addOptions("(Examine, Exit, Wreck the Computer)");
+        addOptions("(Examine, Wreck the Computer, Leave )");
     }
     status = 3;
     visited3 = true;
@@ -382,7 +397,9 @@ robotBattle = function(){
     }
     if (robotHP <= 0){
         fought = true;
-        
+        addNarrator("You land the final blow and the robot falls apart.");
+        addNarrator("You get 50 XP.");
+        room1();
     }
 };
 
