@@ -168,12 +168,15 @@ printStory0 = function() {
                         addNarrator("Despite this, an alarm starts to blare.");
                         addNarrator("Don't think about it too much.");
                         open = true;
+                        timer++;
                     } else {
                         addNarrator("Ok, I'm guessing you've played the game already");
                         addNarrator("Since you don't have a weapon, this shouldn't be an option");
                         addNarrator("Y u tryna cheat, man?");
                         window.location = "https://youtu.be/dQw4w9WgXcQ";
                     }
+                }else {
+                    addNarrator("Choose an option from the Parentheses");
                 }
                 addNarrator("What do you do?");
                 if (weapon === ""){
