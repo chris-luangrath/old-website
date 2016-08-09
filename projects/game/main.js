@@ -154,7 +154,7 @@ printStory0 = function() {
                     addNarrator("However, its controls seem too complicated for you to understand");
                     } else {
                         addNarrator("Upon further inspection, you realize this computer is thoroughly wrecked");
-                        addNarrator("The alarms are pretty loud. You should probably go");
+                        addNarrator("The alarms are pretty loud. You should probably leave now");
                     }
                     timer++;
                 } else if (reply === "leave") {
@@ -196,7 +196,7 @@ printStory0 = function() {
                     if (reply === "take a weapon") {
                         weaponListMaker();
                         addNarrator("What weapon will you take?");
-                        addOptions(weaponList);
+                        addOptions("(" + weapons.join(", ") + ")");
                         equipping = true;
                         timer++;
                     } else if (reply === "leave") {
@@ -321,7 +321,7 @@ room3 = function() {
     if (weapon === ""){
         addOptions("(Examine, Leave)");
     } else if (weapon !== "" && open === false){
-        addOptions("(Examine, Wreck the Computer, Leave )");
+        addOptions("(Examine, Wreck the computer, Leave)");
     }
     status = 3;
     visited3 = true;
