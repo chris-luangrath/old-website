@@ -184,7 +184,7 @@ printStory0 = function() {
                 } else {
                     addNarrator("Choose an option from the Parentheses");
                     if (weapon !== "" && open === false){
-                        addOptions("(Examine, Wreck the Computer, Leave )");
+                        addOptions("(Examine, Wreck the Computer, Leave)");
                     }
                     else {
                         addOptions("(Examine, Leave)");
