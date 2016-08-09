@@ -153,7 +153,7 @@ printStory0 = function() {
                     addNarrator("Upon further inspection, you realize this computer controls the entire building.");
                     addNarrator("However, its controls seem too complicated for you to understand");
                     } else {
-                        addNarrator("Upon further inspection, you realize this computer controls is thoroughly wrecked");
+                        addNarrator("Upon further inspection, you realize this computer is thoroughly wrecked");
                         addNarrator("The alarms are pretty loud. You should probably go");
                     }
                     timer++;
