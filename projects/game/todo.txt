@@ -1,7 +1,7 @@
-1. Figure out how to autoscroll to the bottom
-2. Add a combat section (when you destroy the computer, alarms sounds, man stops you)
-4. ????
-5. Profit
+1. Figure out how to autoscroll to the bottom √
+2. Add a combat section (when you destroy the computer, alarms sounds, man stops you)√
+4. ???? √?
+5. Profit √
 
 around 170/175, What do you do? is messed up
 {
