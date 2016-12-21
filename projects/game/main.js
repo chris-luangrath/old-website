@@ -21,18 +21,17 @@ var room1, room2, room3, room4, robotBattle;
 var visited1 = false, visited2 = false, visited3 = false, visited4 = false;
 var began = false, end = false, open = false, equipping = false, fought = false, timer = 0, weapon = "", oldWeapon = "";
 var vowels = ["a", "e", "i", "o", "u"];
-var reply = "";
+var reply = "", ifOpen;
 var status = 1;
 var weapons =["sword", "hammer", "axe", "chainsaw", "shovel"];
 var weaponList = "";
-var extraHit = false
+var extraHit = false;
 //var focus = window.getElementById('focus');
 
 addItem = function(x) {
         output.appendChild(x);
         var br = document.createElement("br");
         output.appendChild(br);
-        output.scrollIntoView(false);
     };
 addNarrator = function(text){
     addItem(makeNarrator(text));
@@ -290,7 +289,12 @@ room1 = function() {
         } else {
             addNarrator("You are in the white room.");
         }
-        addNarrator("There's nothing in it but a metal door and a hole opposite of the door.");
+        if(fought === true){
+            ifOpen = "(WHICH IS OPEN) ";
+        } else {
+            ifOpen = "";
+        }
+        addNarrator("There's nothing in it but a metal door " + ifOpen + "and a hole opposite of the door.");
         addNarrator("The hole is large enough to enter");
         addNarrator("What do you do?");
         addOptions("(Examine, Go through door, Go through hole, Wait)");
