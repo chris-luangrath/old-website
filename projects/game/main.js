@@ -32,6 +32,7 @@ addItem = function(x) {
         output.appendChild(x);
         var br = document.createElement("br");
         output.appendChild(br);
+        x.scrollIntoView(false);
     };
 addNarrator = function(text){
     addItem(makeNarrator(text));
