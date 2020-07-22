@@ -1,0 +1,53 @@
+@import url("css/buttons.css");
+@import url("css/project.css");
+@import url("css/blueYellowTheme.css");
+
+@keyframes spin {
+    0%, 50%, 100% {
+        transform: rotate(0) scale(.999);
+    }
+    25% {
+        transform: rotate(-.01deg) scale(1);
+    }
+    75% {
+        transform: rotate(.01deg) scale(1);
+    }
+}
+html {
+    background: url("images/background.jpg");
+}
+header {
+    font-size: 80px;
+    display: block;
+    text-align: center;
+    animation: spin 2s 0s infinite ease-in;
+}
+img {
+    width:200px;
+    padding: 0;
+}
+.crop {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+}
+article ul {
+    height: 100px;
+    list-style-type: none;
+    overflow: scroll;
+}
+.center{
+    <!--height: 200px; -->
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+}
+.shift, h1{
+    transform: translateX(10px);
+}
+footer {
+    position: relative;
+    bottom: 0;
+    display: block;
+}
