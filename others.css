@@ -1,3 +1,4 @@
+
 html {
     margin: 0;
     padding: 0;
@@ -21,7 +22,7 @@ body {
 
 header {
     box-sizing: border-box;
-    min-height: 110vh;
+    min-height: 100vh;
     position: relative;
     transform-style: inherit;
     width: 100vw;
@@ -30,14 +31,10 @@ header {
 }
 
 header h1 {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
+    margin-top: -100px;
 }
 
-header,
-header:before {
+header, header:before {
     background: 50% 50% / cover;
 }
 
@@ -49,7 +46,7 @@ header::before {
     right: 0;
     bottom: 0;
     display: block;
-    background: url(images/me_wallpaper.jpg);
+    background: url("images/me_wallpaper.jpg");
     background-size: cover;
     transform-origin: center center 0;
     transform: translateZ(-1px) scale(2);
@@ -57,8 +54,14 @@ header::before {
     min-height: 100vh;
 }
 
+header * {
+    font-weight: normal;
+    letter-spacing: 0.2em;
+    margin: 0;
+    padding: 1em 0;
+}
+
 .container {
-    width: 100%;
     z-index: 2;
     position: absolute;
     top: 90vh;
@@ -67,8 +70,4 @@ header::before {
     font-weight: lighter;
     padding: 40px;
     color: rgb(189, 189, 189);
-}
-
-.container h2 {
-    color: rgb(253, 253, 253);
 }
