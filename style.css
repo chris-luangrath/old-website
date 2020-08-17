@@ -19,9 +19,10 @@ body {
     overflow-x: hidden;
 }
 
-header {
+.test {
     box-sizing: border-box;
     min-height: 110vh;
+    height: 100%;
     position: relative;
     transform-style: inherit;
     width: 100vw;
@@ -29,19 +30,19 @@ header {
     text-transform: uppercase;
 }
 
-header h1 {
+.test h1 {
     margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
 }
 
-header,
-header:before {
+.test,
+.test:before {
     background: 50% 50% / cover;
 }
 
-header::before {
+.test::before {
     content: "";
     position: absolute;
     top: 0;
@@ -50,8 +51,9 @@ header::before {
     bottom: 0;
     display: block;
     background: url(images/me_wallpaper.jpg);
-    background-size: cover;
-    transform-origin: center center 0;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transform-origin: center 80% 0;
     transform: translateZ(-1px) scale(2);
     z-index: -1;
     min-height: 100vh;
@@ -61,7 +63,7 @@ header::before {
     width: 100%;
     z-index: 2;
     position: absolute;
-    top: 90vh;
+    top: 101%;
     background: #000417;
     line-height: 30px;
     font-weight: lighter;
@@ -70,5 +72,52 @@ header::before {
 }
 
 .container h2 {
+    color: rgb(253, 253, 253);
+}
+
+
+.test2 h1 {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    translateX(250%);
+}
+
+.test2,
+.test2:before {
+    background: 50% 50% / cover;
+}
+
+.test2::before {
+    content: "";
+    position: relative;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: block;
+    background: url(images/kermit.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    transform-origin: center 80% 0;
+    transform: translateY(00%) translateZ(-1px) scale(2);
+    z-index: -1;
+    min-height: 100vh;
+}
+
+.container2 {
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    top: 251%;
+    background: #000417;
+    line-height: 30px;
+    font-weight: lighter;
+    padding: 40px;
+    color: rgb(189, 189, 189);
+}
+
+.container2 h2 {
     color: rgb(253, 253, 253);
 }
