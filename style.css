@@ -1,123 +1,63 @@
-html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    font-family: "Monument Extended", Arial, Helvetica, sans-serif;
+
+body, html {
+  height: 100%;
+  margin: 0;
+  font: 400 15px/1.8 "Lato", sans-serif;
+  color: #777;
 }
 
-body {
-    color: white;
-    margin: 0;
-    padding: 0;
-    perspective: 1px;
-    transform-style: preserve-3d;
-    height: 100%;
-    width: 100%;
-    overflow-y: scroll;
-    overflow-x: hidden;
+.bgimg-1, .bgimg-2, .bgimg-3 {
+  position: relative;
+  opacity: 0.65;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+.bgimg-1 {
+  background-image: url("images/me_wallpaper.jpg");
+  min-height: 100%;
 }
 
-.test {
-    box-sizing: border-box;
-    min-height: 110vh;
-    height: 100%;
-    position: relative;
-    transform-style: inherit;
-    width: 100vw;
-    text-align: center;
-    text-transform: uppercase;
+.bgimg-2 {
+  background-image: url("images/kermit.png");
+  min-height: 110%;
 }
 
-.test h1 {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
+.bgimg-3 {
+  background-image: url("images/sk.gif");
+  min-height: 400px;
 }
 
-.test,
-.test:before {
-    background: 50% 50% / cover;
+.caption {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  color: #000;
 }
 
-.test::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: block;
-    background: url(images/me_wallpaper.jpg);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    transform-origin: center 80% 0;
-    transform: translateZ(-1px) scale(2);
-    z-index: -1;
-    min-height: 100vh;
+.caption span.border {
+  background-color: #111;
+  color: #fff;
+  padding: 18px;
+  font-size: 25px;
+  letter-spacing: 10px;
 }
 
-.container {
-    width: 100%;
-    z-index: 2;
-    position: absolute;
-    top: 101%;
-    background: #000417;
-    line-height: 30px;
-    font-weight: lighter;
-    padding: 40px;
-    color: rgb(189, 189, 189);
-}
-
-.container h2 {
-    color: rgb(253, 253, 253);
+h3 {
+  letter-spacing: 5px;
+  text-transform: uppercase;
+  font: 20px "Lato", sans-serif;
+  color: #111;
 }
 
 
-.test2 h1 {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    translateX(250%);
-}
-
-.test2,
-.test2:before {
-    background: 50% 50% / cover;
-}
-
-.test2::before {
-    content: "";
-    position: relative;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    display: block;
-    background: url(images/kermit.png);
-    background-size: 100%;
-    background-repeat: no-repeat;
-    transform-origin: center 80% 0;
-    transform: translateY(00%) translateZ(-1px) scale(2);
-    z-index: -1;
-    min-height: 100vh;
-}
-
-.container2 {
-    width: 100%;
-    z-index: 2;
-    position: absolute;
-    top: 251%;
-    background: #000417;
-    line-height: 30px;
-    font-weight: lighter;
-    padding: 40px;
-    color: rgb(189, 189, 189);
-}
-
-.container2 h2 {
-    color: rgb(253, 253, 253);
-}
+/* Turn off parallax scrolling for tablets and phones */
+@media only screen and (max-device-width: 1024px) {
+    .bgimg-1, .bgimg-2, .bgimg-3 {
+      background-attachment: scroll;
+    }
+  }
