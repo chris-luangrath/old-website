@@ -6,9 +6,10 @@ body, html {
   color: #777;
 }
 
-.bgimg-1, .bgimg-2, .bgimg-3 {
+.bgimg-1, .bgimg-2, .bgimg-22, .bgimg-3 {
   position: relative;
-  opacity: 0.65;
+  opacity: 1; 
+  /* opacity: 0.65; */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -21,13 +22,24 @@ body, html {
 }
 
 .bgimg-2 {
-  background-image: url("images/kermit.png");
-  min-height: 110%;
+  background-image: url("images/csanm150/LuangrathBugCropped.jpg");
+  background-size: contain;
+  background-color: #667876;
+  min-height: 180%;
+}
+
+.bgimg-22 {
+  background-image: url("images/csanm150/LuangrathBugCropped.jpg");
+  background-size: contain;
+  background-color: #667876;
+  min-height: 100%;
 }
 
 .bgimg-3 {
-  background-image: url("images/sk.gif");
-  min-height: 400px;
+  background-image: url("images/csanm150/LuangrathLego.jpg");
+  min-height: 180%;
+  background-color: #69311d;
+  background-size: contain;
 }
 
 .caption {
