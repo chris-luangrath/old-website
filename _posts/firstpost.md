@@ -1,4 +1,5 @@
 ---
+layout: post
 title: First Post
 date: 2022-09-12 10:22:00 -000
 categories: [test]      # [first,second,third]
