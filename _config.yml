@@ -15,7 +15,10 @@ baseurl: ''
 lang: en
 
 # Additional parameters for datetime localization, optional. › https://github.com/iamkun/dayjs/tree/dev/src/locale
-prefer_datetime_locale:
+prefer_datetime_locale: en
+
+# I added this, lets see what dates everything is
+future: true
 
 # Change to your timezone › http://www.timezoneconverter.com/cgi-bin/findzone/findzone
 timezone: America/Denver
