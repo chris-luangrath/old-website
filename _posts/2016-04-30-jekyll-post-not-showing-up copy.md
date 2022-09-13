@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "GoXLR WITH WIRELESS HEADSET - Connect ANY wireless bluetooth headphones"
-date: 2020-01-07 09:00:00 -0500
+date: 2022-09-12 09:00:00 -0500
 categories: streaming
 tags: goxlr streaming twitch hardware
 ---
