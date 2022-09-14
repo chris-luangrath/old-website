@@ -2,8 +2,8 @@
 layout: post
 title: Why Do I Like Video Games?
 date: 2022-09-14 12:00:00 -000
-categories: [general]      # [first,second,third]
-tags: [general]            # [first,second,third]
+categories: [general]                   # [first,second,third]
+tags: [personal,video_games]            # [first,second,third]
 ---
 # Why Do I Like Video Games?
 I've been playing video games my whole life. As a small kid, I remember watching my dad play Robotech, 
