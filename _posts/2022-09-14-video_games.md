@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Fighting Games
+title: Why Do I Like Video Games?
 date: 2022-09-14 12:00:00 -000
 categories: [general]      # [first,second,third]
 tags: [general]            # [first,second,third]
@@ -18,17 +18,4 @@ emotions. In Resident Evil, I panicked when a zombie that I definitely killed st
 
 But then, there is one genre of game that trumps all others in my book...
 
-
-# Why Do I Like Fighting Games?
-Fighting games are in a league of their own. There are so many aspects to them that I can't help but love.
-
-## Intricacy
-It's interesting, because intricacy 
-
-Easy to learn, hard to master
-Simply put, I love fighting games. I'll fill this out later, but for future reference
-- Intense
-- Meet new people
-- Master yourself
-- Super cool
-- My dad grew up on Street Fighter 2
+Fighting games are in a league of their own; there are so many aspects to them that I can't help but love. The energy they bring, the stories they tell (not just in-game, but through its competitors), the burning passion of its devoted fans, the legacies created by savants and villains, the mastery of the game, the mastery over others, the mastery over yourself... is beyond anything else I've ever seen. To say that they're incredible would be an understatement.
