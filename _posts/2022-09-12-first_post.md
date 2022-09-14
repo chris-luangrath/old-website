@@ -2,10 +2,9 @@
 layout: post
 title: First Post
 date: 2022-09-12 10:22:00 -000
-categories: [test]      # [first,second,third]
-tags: [tests]            # [first,second,third]
+categories: [general]      # [first,second,third]
+tags: [general]            # [first,second,third]
 ---
-
 # Welcome!
 
 This website is so you can learn who I am. The content showcased here will be school projects, personal projects, and 
