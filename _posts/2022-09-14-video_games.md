@@ -2,8 +2,8 @@
 layout: post
 title: Why Do I Like Video Games?
 date: 2022-09-14 12:00:00 -000
-categories: [general]                   # [first,second,third]
-tags: [personal,video_games]            # [first,second,third]
+categories: [general,personal]                   # [first,second,third]
+tags: [video_games]            # [first,second,third]
 ---
 I've been playing video games my whole life. As a small kid, I remember watching my dad play Robotech, 
 or playing Lego Star Wars with my mom. I remember feeling extremely proud of myself after beating 
@@ -18,3 +18,5 @@ emotions. In Resident Evil, I panicked when a zombie that I definitely killed st
 But then, there is one genre of game that trumps all others in my book...
 
 Fighting games are in a league of their own; there are so many aspects to them that I can't help but love. The energy they bring, the stories they tell (not just in-game, but through its competitors), the burning passion of its devoted fans, the legacies created by savants and villains, the mastery of the game, the mastery over others, the mastery over yourself... is beyond anything else I've ever seen. To say that they're incredible would be an understatement.
+
+Continued in next post...
