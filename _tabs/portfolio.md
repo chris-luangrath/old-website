@@ -14,7 +14,7 @@ The warehouse background texture, the metal texture on the blades and wings, and
 mine, but images that I found online. This was for the last project in CSANM 150, where our prompt 
 was to design a bug. I decided to design a sort of praying mantis with with technological 'enhancements'. 
 
-# Lego Defender
+# Lego Battle
 ![Lego Battle](../assets/csanm150/LuangrathLegoEdited.jpg)
 This was another submission with my application. This was the for the first project in CSANM 150, 
 where our prompt was to make a lego person and put them in a scenario. I made this little skirmish
