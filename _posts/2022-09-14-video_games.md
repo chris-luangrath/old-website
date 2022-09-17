@@ -5,10 +5,7 @@ date: 2022-09-14 12:00:00 -000
 categories: [general,personal]                   # [first,second,third]
 tags: [video_games]            # [first,second,third]
 ---
-I've been playing video games my whole life. As a small kid, I remember watching my dad play Robotech, 
-or playing Lego Star Wars with my mom. I remember feeling extremely proud of myself after beating 
-Pokemon Fire Red, playing Super Smash Bros. with my friends, and so many other things. Video Games 
-have lead me to meet some of my closest friends, make memories with friends that are on the other side of the world, 
+I've been playing video games my whole life. As a small kid, I remember watching my dad play Robotech and playing Lego Star Wars with my mom. I remember feeling extremely proud of myself after beating Pokemon Fire Red and playing Super Smash Bros. with my friends. Video Games have lead me to meet some of my closest friends, make memories with people on the other side of the world, and so many other great things.
 Simply put, they have played a large part in my life.
 
 Aside from just personal reasons, playing games is also just a great hobby to have. Games are more involved than TV or a movies, and more immersive than books. The greatest power that video games have over other forms of media are that they can *make you feel things.* 
