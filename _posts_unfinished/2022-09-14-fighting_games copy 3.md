@@ -1,14 +1,17 @@
 ---
 layout: post
-title: Problems With Fighting Games - Single Player Content
-date: 2022-09-17 12:00:00 -000
-categories: ["fighting games",problems]      # [first,second,third]
-tags: [general,single-player,street-fighter]            # [first,second,third]
+title: How do Strong Characters Affect a Game?
+date: 2022-09-26 12:00:00 -000
+categories: [balancing,characters]      # [first,second,third]
+tags: [smash-bros,street-fighter]            # [first,second,third]
 ---
-Another problem that fighting games have struggled with in the past is a lack of single-player content. The main emphasis of fighting games is usually about fighting versus another person in a competative setting, but it's also important for games to focus on content that can be enjoyed alone. A fighting game can be a lot of fun, but it can feel like only part of a game if it's missing single-player action. Whether it's competative players worn out from the grind of online looking for something else, or people who prefer to play by themselves, it's important for games to be able to accomodate for that.
+There is a large cast of characters to choose from in fighting games, all with unique moves and mechanics. This diversity leads to a more varied and exciting game experience, and it's much more interesting to have different characters that do different things with different strengths and weaknesses. However, with all these characters, each with their own movesets (and sometimes mechanics), it becomes a struggle to have a character that's fun to use while not completely dominates the rest...
 
-Street Fighter 5 had a rocky release in February 2016 because of several problems like bad netcode/servers and lack of characters, but *especially* the lack of single player content. An arcade mode and a story weren't added to the game until July 2016, 5 months after the initial release! These problems caused the game to be a disappointment in the eyes of many consumers, and although Capcom was eventually able to deliver a quality product by adding the story mode and an arcade mode, the initial reaction of the game had lasting damage that lead to a following smaller than what could potentially have been.
+Now, having strong characters isn't a bad thing, especially when there are *several* strong characters that *do different things.* However, having too few, or even just one incredibly strong character can alter the general competative experience of the game. For example, the strongest character in Super Smash Bros. Brawl was Meta Knight, from the Kirby franchise, and he dominated *by far*. With incredible speed, offensive capabilities, and hard to exploit weaknesses, he completely dominated all other characters on the roster. There were other strong characters that could perform well in tournaments, but because of how easily they were snuffed out by Meta Knight, they dropped significantly in rankings. The other common character picks at tournaments were usually influenced by how well they could deal with Meta Knight, like Falco, Ice Climbers, and Pikachu, but even then Meta Knight always had a major advantage. This character alone single-handedly defined the meta of the competative scene and infamously became known as the *best character in the whole series.*
 
-Looking at the problems that Street Fighter 5 initially had is incredibly interesting in hindsight, especially because Street Fighter 6 is in development, and it looks like Capcom is determined to not repeat their mistakes. They've announced a Single-Player Campaign, where you plays as a customizable character and explore Metro City. They've also announced a mode called "Extreme Battle", a set of rotating game modes with wacky rulesets, like dealing with stage hazards or using a different win condition, perfect for casual enjoyment. Capcom has taken great strides to make Street Fighter 6 a complete product on release, and the content that they're developing for their fans seems incredibly promising.
+Meta Knight is a great case study of how strong characters can affect a game. There might not be as big of a power gap between characters, but strong characters can have similar effects on the game.
 
-Also the music is bangin, wowee
+In tournaments and higher-level play, stronger characters are a common pick by most top-level players, with less players picking lower ranking A Tier characters and rarer picks of lower tier characters from less players. There's an occasional surprise pick of lower tier characters that are especially good at answering certain situations, but lower tier characters are usually picked less in general. 
+
+Of course, the fact that stronger characters are picked more is pretty obvious, but the 
+
