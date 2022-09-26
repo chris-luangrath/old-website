@@ -24,8 +24,8 @@ cool place to document it.
 # For Recruiters
 If you're looking for specific examples of my thoughts, check out these posts:
 - Motivation: 
-    * [Why do I Like Video Games?]({https://chris-luangrath.github.io/posts/video_games/})
-    * [Why do I Like Fighting Games?]({https://chris-luangrath.github.io/posts/fighting_games/})
+    * [Why do I Like Video Games?](/posts/video_games)
+    * [Why do I Like Fighting Games?](/posts/fighting_games)
 - Experience/Observations 
-    * [Problems With Fighting Games - Intricacy]({https://chris-luangrath.github.io/posts/fighting_games-prob-1/})
-    * [Problems With Fighting Games - Single Player Content]({https://chris-luangrath.github.io/posts/fighting_games-prob-2/})
+    * [Problems With Fighting Games - Intricacy](/posts/fighting_games-prob-1)
+    * [Problems With Fighting Games - Single Player Content](/posts/fighting_games-prob-2)
