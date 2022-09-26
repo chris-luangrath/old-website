@@ -21,7 +21,7 @@ could possibly be working on in the near future, I want to do my best to show of
 and that I'm qualified and a good candidate to work on theirs. Plus, I think about this stuff all the time, and it'll be a 
 cool place to document it.
 
-# For Recruiters
+# Special Pages
 If you're looking for specific examples of my thoughts, check out these posts:
 - Motivation: 
     * [Why do I Like Video Games?](/posts/video_games)
