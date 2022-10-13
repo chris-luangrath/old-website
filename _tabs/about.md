@@ -24,6 +24,7 @@ If you're looking for specific examples of my thoughts, check out these posts:
     * [Why do I Like Fighting Games?](/posts/fighting_games)
 - Gameplay/Mechanic Observations
     * [How Are Characters Balanced?](/posts/balance_moves/)
+    * [Interaction](/posts/interaction/)
 - Experience/Observations 
     * [Problems With Fighting Games - Intricacy](/posts/fighting_games-prob-1)
     * [Problems With Fighting Games - Single Player Content](/posts/fighting_games-prob-2)
