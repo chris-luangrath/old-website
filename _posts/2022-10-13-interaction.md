@@ -2,7 +2,7 @@
 layout: post
 title: It's All About Interaction, Man
 date: 2022-10-08 12:00:00 -000
-categories: [interaction,fun]      # [first,second,third]
+categories: [gameplay,interaction]      # [first,second,third]
 tags: [smash-bros,yu-gi-oh,legends-of-runeterra,magic-the-gathering,guilty-gear,marve-vs-capcom]            # [first,second,third]
 ---
 When playing games, the player wants to do cool and fun things, and they want to do them well. In single-player games, this would include things like maintaining speed in movement-focused games or defeating a difficult boss. When you introduce actual players into the equation however, things start to get a bit more complicated. The goals of the two players are now opposing each other; you still want to let each player do cool things, but now you have to keep in mind that it will come at the expense of the player that is also trying to have a good time. 
